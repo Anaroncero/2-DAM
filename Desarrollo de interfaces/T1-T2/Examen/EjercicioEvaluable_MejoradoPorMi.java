@@ -123,6 +123,7 @@ En esta tarea deberás adjuntar el fichero de código .java y una captura de pan
                  // Construir una cadena para mostrar los resultados
                  StringBuilder resultado = new StringBuilder();
                  for (int i = 0; i < 5; i++) {
+                    //recorrer el array e ir añadiendo los arrays
                      resultado.append(nombreProductos[i]).append(": ").append(String.format("%.2f", precios[i] * unidades[i])).append("€\n");
                  }
                  resultado.append("Precio Total: ").append(String.format("%.2f", total));
