@@ -36,6 +36,7 @@ En esta tarea deberás adjuntar el fichero de código .java y una captura de pan
          frame.setSize(800, 600);
          frame.setLayout(new GridLayout(7, 4, 10, 10));
  
+
          // Labels
          JLabel productoLabel = new JLabel("Producto");
          productoLabel.setHorizontalAlignment(productoLabel.CENTER);
@@ -50,15 +51,15 @@ En esta tarea deberás adjuntar el fichero de código .java y una captura de pan
          resultadoText.setHorizontalAlignment(resultadoText.CENTER);
 
 
-
+         // TextFields
          JTextField lresultado = new JTextField(10);
          lresultado.setEditable(false); // No editable
- 
-         // TextFields
+
          JTextField[] productoFields = new JTextField[5];
          JTextField[] precioFields = new JTextField[5];
          JTextField[] unidadFields = new JTextField[5];
- 
+        
+         //crear 5 textfields de cada apartado
          for (int i = 0; i < 5; i++) {
              productoFields[i] = new JTextField(10);
              precioFields[i] = new JTextField(10);
@@ -72,24 +73,25 @@ En esta tarea deberás adjuntar el fichero de código .java y una captura de pan
          JButton calcular = new JButton("Calcular");
          calcular.setBackground(azul);
  
-         // Añadir componentes al frame
+         // Añadir JLabel (enunciados) al frame
          frame.add(new JLabel("")); // Espacio vacío
          frame.add(productoLabel);
          frame.add(precioLabel);
          frame.add(unidadesLabel);
          
-
- 
-         
+          
          for (int i = 0; i < 5; i++) {
+            //Crear los JLabel númericos
             JLabel label = new JLabel(String.valueOf(i + 1));
             label.setHorizontalAlignment(SwingConstants.RIGHT); // Alineación a la derecha
             frame.add(label); // Agregar la etiqueta al marco
-             frame.add(productoFields[i]);
-             frame.add(precioFields[i]);
-             frame.add(unidadFields[i]);
+            //Añadir los Array de JTextfields
+            frame.add(productoFields[i]);
+            frame.add(precioFields[i]);
+            frame.add(unidadFields[i]);
          }
  
+         //Añadir otros JLabel, Botón
          frame.add(new JLabel("")); // Espacio vacío
          frame.add(calcular);
          frame.add(resultadoText);
