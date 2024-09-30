@@ -38,9 +38,20 @@ En esta tarea deberás adjuntar el fichero de código .java y una captura de pan
  
          // Labels
          JLabel productoLabel = new JLabel("Producto");
+         productoLabel.setHorizontalAlignment(productoLabel.CENTER);
+
          JLabel precioLabel = new JLabel("Precio");
+         precioLabel.setHorizontalAlignment(precioLabel.CENTER);
+      
          JLabel unidadesLabel = new JLabel("Unidades");
+         unidadesLabel.setHorizontalAlignment(unidadesLabel.CENTER);
+
          JLabel resultadoText = new JLabel("Precio Total: ");
+         resultadoText.setHorizontalAlignment(resultadoText.CENTER);
+
+         JLabel espacio = new JLabel("");
+         JLabel espacio1 = new JLabel("");
+
          JTextField lresultado = new JTextField(10);
          lresultado.setEditable(false); // No editable
  
