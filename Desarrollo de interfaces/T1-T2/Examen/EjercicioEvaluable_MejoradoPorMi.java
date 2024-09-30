@@ -4,7 +4,7 @@
  * Desarrolla un programa que permita introducir el nombre, precio y unidades de hasta 5 productos que se van a comprar en una tienda, y calcule el precio total (debe mostrar la suma al pulsar el botón).
  * La interfaz debe verse lo más similar posible a esta:
  * 
- * Puntuación:
+ * Puntuación
 
 Uso correcto de componentes: 3 puntos.
 Uso y anidamiento adecuado de layouts que permitan que la interfaz se adapte automáticamente a diferentes tamaños: 4 puntos.
