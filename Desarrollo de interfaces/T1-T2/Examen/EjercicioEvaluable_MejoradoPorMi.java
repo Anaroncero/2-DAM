@@ -49,8 +49,7 @@ En esta tarea deberás adjuntar el fichero de código .java y una captura de pan
          JLabel resultadoText = new JLabel("Precio Total: ");
          resultadoText.setHorizontalAlignment(resultadoText.CENTER);
 
-         JLabel espacio = new JLabel("");
-         JLabel espacio1 = new JLabel("");
+
 
          JTextField lresultado = new JTextField(10);
          lresultado.setEditable(false); // No editable
@@ -74,27 +73,28 @@ En esta tarea deberás adjuntar el fichero de código .java y una captura de pan
          calcular.setBackground(azul);
  
          // Añadir componentes al frame
-         JLabel espacio = new JLabel(" ");
-         frame.add(espacio);
+         frame.add(new JLabel("")); // Espacio vacío
          frame.add(productoLabel);
          frame.add(precioLabel);
          frame.add(unidadesLabel);
-         frame.add(new JLabel("")); // Espacio vacío
-¡
+         
+
  
          
          for (int i = 0; i < 5; i++) {
-             frame.add(new JLabel(String.valueOf(i + 1))); // la columna de números 1 al 5 de la izquierda
+            JLabel label = new JLabel(String.valueOf(i + 1));
+            label.setHorizontalAlignment(SwingConstants.RIGHT); // Alineación a la derecha
+            frame.add(label); // Agregar la etiqueta al marco
              frame.add(productoFields[i]);
              frame.add(precioFields[i]);
              frame.add(unidadFields[i]);
          }
  
-         
+         frame.add(new JLabel("")); // Espacio vacío
          frame.add(calcular);
          frame.add(resultadoText);
          frame.add(lresultado);
-         frame.add(new JLabel("")); // Espacio vacío
+         
  
          // Funcionalidad del botón
          calcular.addActionListener(new ActionListener() {
