@@ -126,40 +126,35 @@ public class EjercicioEvaluable_1 {
         // Jbutton
         JButton calcular = new JButton("Calcular");
         calcular.setBackground(azul);
-
+     
         // Añdir todo
-        frame.add(espacio);
-        frame.add(producto);
-        frame.add(precio);
-        frame.add(unidades);
+        JComponent[] componentes = { espacio, producto, precio, unidades };
+        for (int i = 0; i < componentes.length; i++) {
+            frame.add(componentes[i]);
+        }
 
-        frame.add(numero1);
-        frame.add(l1);
-        frame.add(l2); // p1
-        frame.add(l3); // u1
-        frame.add(numero2);
-        frame.add(l4);
-        frame.add(l5); // p2
-        frame.add(l6); // u2
-        frame.add(numero3);
-        frame.add(l7);
-        frame.add(l8); // p3
-        frame.add(l9); // u3
-        frame.add(numero4);
-        frame.add(l10);
-        frame.add(l11); // p4
-        frame.add(l12); // u4
-        frame.add(numero5);
-        frame.add(l13);
-        frame.add(l14); // p5
-        frame.add(l15); // u5
-        frame.add(espacio2);
+        // Agrupar los componentes en un arreglo
+        JComponent[] componentes2 = {
+            numero1, l1, l2, l3,
+            numero2, l4, l5, l6,
+            numero3, l7, l8, l9,
+            numero4, l10, l11, l12,
+            numero5, l13, l14, l15
+        };
+     
+        // Añadir todos los componentes al frame
+        for (int i = 0; i < componentes2.length; i++) {
+            frame.add(componentes2[i]);
+        }
 
-        frame.add(espacio2);
-        frame.add(calcular);
-        frame.add(resultadoText);
-        frame.add(lresultado);
+        // Agrupar los componentes en un arreglo
+        JComponent[] componentes3 = { espacio2, calcular, resultadoText, resultado };
 
+        // Añadir todos los componentes al frame
+        for (int i = 0; i < componentes3.length; i++) {
+            frame.add(componentes3[i]);
+        }
+     
         // Funcionalidad
         calcular.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -191,38 +186,44 @@ public class EjercicioEvaluable_1 {
                 u4 = Double.parseDouble(l12.getText());
                 u5 = Double.parseDouble(l15.getText());
 
-                //Multiplicacion precio y unidades
-                mult = p1 * p2;
-                mult2 = p2 * u2;
-                mult3 = p3 * u3;
-                mult4 = p4 * u4;
-                mult5 = p5 * u5;
+                // Supongamos que p y u son arreglos que contienen los precios y unidades
+                double[] precios = { p1, p2, p3, p4, p5 };
+                double[] unidades = { u1, u2, u3, u4, u5 };
+                double total = 0;
 
-                double total = (mult + mult2 + mult3 + mult4 + mult5);
+                for (int i = 0; i < precios.length; i++) {
+                    total += precios[i] * unidades[i];
+                }
 
-                //Redondeo resultado
-                Math.round(total);
-                Math.round(mult);
-                Math.round(mult2);
-                Math.round(mult3);
-                Math.round(mult4);
-                Math.round(mult5);
+                // Redondeo de resultados
+                long totalRedondeado = Math.round(total);
+                long[] resultadosRedondeados = {
+                    Math.round(mult),
+                    Math.round(mult2),
+                    Math.round(mult3),
+                    Math.round(mult4),
+                    Math.round(mult5)
+                };
 
                 datosGuardados = true;
 
-                lresultado.setText("" + total);
+                resultado.setText("" + totalRedondeado);
 
-                if(datosGuardados == true){
-                    JOptionPane.showMessageDialog(frame,pro1 + " " + mult + "€" + "\n" + pro2 + " " + mult2 + "€" + "\n" 
-                    + pro3 + " " + mult3 + "€" + "\n" + pro4 + " " + mult4 + "€" + "\n" + pro5 + " " + mult5 + "€" + "\n" 
-                    + "Precio Total: " + total, "Resultado", JOptionPane.INFORMATION_MESSAGE);
+                if (datosGuardados) {
+                    StringBuilder mensaje = new StringBuilder();
+                    for (int i = 0; i < resultadosRedondeados.length; i++) {
+                        mensaje.append("Producto ").append(i + 1).append(": ").append(resultadosRedondeados[i])
+                                .append("€\n");
+                    }
+                    mensaje.append("Precio Total: ").append(totalRedondeado);
+
+                    JOptionPane.showMessageDialog(frame,
+                        mensaje.toString(),
+                        "Resultado", JOptionPane.INFORMATION_MESSAGE);
                 }
-
 
             }
         });
-
-
 
         // Hacer visible y centrar
         frame.setVisible(true);
