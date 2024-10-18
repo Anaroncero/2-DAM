@@ -1,0 +1,8 @@
+<!-- Juegos olimpicos logo svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" fill="none" stroke-width="10">
+    <circle cx="160" cy="240" r="120" stroke="#FF0000" />
+    <circle cx="320" cy="240" r="120" stroke="#00A3E0" />
+    <circle cx="480" cy="240" r="120" stroke="#F6EB61" />
+    <circle cx="240" cy="360" r="120" stroke="#4B8C2A" />
+    <circle cx="400" cy="360" r="120" stroke="#F15A29" />
+</svg>
