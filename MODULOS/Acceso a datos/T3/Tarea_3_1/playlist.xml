@@ -1,0 +1,236 @@
+ <!-- Validación DTD. -->
+<!DOCTYPE playlist [
+    <!ELEMENT playlist (cancion+)>
+    <!ELEMENT cancion (titulo, artista, album, generos)>
+    <!ATTLIST cancion id CDATA #REQUIRED>
+    <!ELEMENT titulo (#PCDATA)>
+    <!ELEMENT artista (nombre, nacionalidad)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT nacionalidad (#PCDATA)>
+    <!ELEMENT album (nombre, anio)>
+    <!ELEMENT anio (#PCDATA)>
+    <!ELEMENT generos (genero+)>
+    <!ELEMENT genero (#PCDATA)>
+]>
+
+<!-- XML Playlist. -->
+<playlist>
+    <cancion id="1">
+        <titulo>Marta tiene un marcapasos</titulo>
+        <artista>
+            <nombre>Héroes del Silencio</nombre>
+            <nacionalidad>Español</nacionalidad>
+        </artista>
+        <album>
+            <nombre>Senderos de Traición</nombre>
+            <anio>1990</anio>
+        </album>
+        <generos>
+            <genero>Rock</genero>
+            <genero>Pop</genero>
+        </generos>
+    </cancion>
+    <cancion id="2">
+        <titulo>Chiquilla</titulo>
+        <artista>
+            <nombre>Tam Tam Go!</nombre>
+            <nacionalidad>Español</nacionalidad>
+        </artista>
+        <album>
+            <nombre>Atrapados en el tiempo</nombre>
+            <anio>1989</anio>
+        </album>
+        <generos>
+            <genero>Pop</genero>
+            <genero>Rock</genero>
+        </generos>
+    </cancion>
+    <cancion id="3">
+        <titulo>Juan Antonio Cortés</titulo>
+        <artista>
+            <nombre>Los Delinqüentes</nombre>
+            <nacionalidad>Español</nacionalidad>
+        </artista>
+        <album>
+            <nombre>El Verde y el Negro</nombre>
+            <anio>1998</anio>
+        </album>
+        <generos>
+            <genero>Flamenco</genero>
+            <genero>Rock</genero>
+        </generos>
+    </cancion>
+    <cancion id="4">
+        <titulo>Me colé en una fiesta</titulo>
+        <artista>
+            <nombre>Los Secretos</nombre>
+            <nacionalidad>Español</nacionalidad>
+        </artista>
+        <album>
+            <nombre>Los Secretos</nombre>
+            <anio>1981</anio>
+        </album>
+        <generos>
+            <genero>Pop</genero>
+            <genero>Rock</genero>
+        </generos>
+    </cancion>
+    <cancion id="5">
+        <titulo>Quiero tener tu presencia</titulo>
+        <artista>
+            <nombre>Los Ángeles</nombre>
+            <nacionalidad>Español</nacionalidad>
+        </artista>
+        <album>
+            <nombre>Los Ángeles</nombre>
+            <anio>1984</anio>
+        </album>
+        <generos>
+            <genero>Pop</genero>
+        </generos>
+    </cancion>
+    <cancion id="6">
+        <titulo>En algún lugar de un gran país</titulo>
+        <artista>
+            <nombre>Ducan</nombre>
+            <nacionalidad>Español</nacionalidad>
+        </artista>
+        <album>
+            <nombre>Ducan</nombre>
+            <anio>1990</anio>
+        </album>
+        <generos>
+            <genero>Pop</genero>
+        </generos>
+    </cancion>
+    <cancion id="7">
+        <titulo>Lobo-hombre en París</titulo>
+        <artista>
+            <nombre>La Unión</nombre>
+            <nacionalidad>Español</nacionalidad>
+        </artista>
+        <album>
+            <nombre>Mil Siluetas</nombre>
+            <anio>1984</anio>
+        </album>
+        <generos>
+            <genero>Pop</genero>
+            <genero>Rock</genero>
+        </generos>
+    </cancion>
+    <cancion id="8">
+        <titulo>Cien gaviotas</titulo>
+        <artista>
+            <nombre>Héroes del Silencio</nombre>
+            <nacionalidad>Español</nacionalidad>
+        </artista>
+        <album>
+            <nombre>Senderos de Traición</nombre>
+            <anio>1990</anio>
+        </album>
+        <generos>
+            <genero>Rock</genero>
+        </generos>
+    </cancion>
+    <cancion id="9">
+        <titulo>El ataque de las chicas cocodrilo</titulo>
+        <artista>
+            <nombre>Los Toreros Muertos</nombre>
+            <nacionalidad>Español</nacionalidad>
+        </artista>
+        <album>
+            <nombre>30 Años de Éxitos</nombre>
+            <anio>1989</anio>
+        </album>
+        <generos>
+            <genero>Pop</genero>
+            <genero>Rock</genero>
+        </generos>
+    </cancion>
+    <cancion id="10">
+        <titulo>Te quiero, hombres G</titulo>
+        <artista>
+            <nombre>Hombres G</nombre>
+            <nacionalidad>Español</nacionalidad>
+        </artista>
+        <album>
+            <nombre>Hombres G</nombre>
+            <anio>1985</anio>
+        </album>
+        <generos>
+            <genero>Pop</genero>
+            <genero>Rock</genero>
+        </generos>
+    </cancion>
+    <cancion id="11">
+        <titulo>Después de la 1</titulo>
+        <artista>
+            <nombre>Los Secretos</nombre>
+            <nacionalidad>Español</nacionalidad>
+        </artista>
+        <album>
+            <nombre>Los Secretos</nombre>
+            <anio>1981</anio>
+        </album>
+        <generos>
+            <genero>Pop</genero>
+        </generos>
+    </cancion>
+    <cancion id="12">
+        <titulo>Escuela de calor</titulo>
+        <artista>
+            <nombre>Radio Futura</nombre>
+            <nacionalidad>Español</nacionalidad>
+        </artista>
+        <album>
+            <nombre>La Ley del Bandas</nombre>
+            <anio>1984</anio>
+        </album>
+        <generos>
+            <genero>Rock</genero>
+        </generos>
+    </cancion>
+    <cancion id="13">
+        <titulo>Vereda de la puerta de atrás</titulo>
+        <artista>
+            <nombre>Paco de Lucía</nombre>
+            <nacionalidad>Español</nacionalidad>
+        </artista>
+        <album>
+            <nombre>Almoraima</nombre>
+            <anio>1994</anio>
+        </album>
+        <generos>
+            <genero>Flamenco</genero>
+        </generos>
+    </cancion>
+    <cancion id="14">
+        <titulo>El límite, la frontera</titulo>
+        <artista>
+            <nombre>Los Delinqüentes</nombre>
+            <nacionalidad>Español</nacionalidad>
+        </artista>
+        <album>
+            <nombre>El Verde y el Negro</nombre>
+            <anio>1998</anio>
+        </album>
+        <generos>
+            <genero>Flamenco</genero>
+            <genero>Rock</genero>
+        </generos>
+    </cancion>
+    <cancion id="15">
+        <titulo>Si no quieres, no</titulo>
+        <artista>
+            <nombre>Los Secretos</nombre>
+            <nacionalidad>Español</nacionalidad>
+        </artista>
+        <album>
+            <nombre>Los Secretos</nombre>
+            <anio>1981</anio>
+        </album>
+        <generos>
+            <genero>Pop</genero>
+        </generos>
+    </cancion>
+</playlist>

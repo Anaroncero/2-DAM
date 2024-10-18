@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Este es un archivo XML que representa información sobre bibliotecas y libros. -->
+<libraries>
+<!-- Cada elemento <library> representa una biblioteca con su nombre y ubicación. -->
+    <library>
+    <!-- El elemento <name> contiene el nombre de la biblioteca. -->
+        <name>Biblioteca Pública</name>
+        <location>Jaén</location>
+        <books>
+            <book>
+                <title>El Gran Gatsby</title>
+                <author>F. Scott Fitzgerald</author>
+                <genre>Ficción</genre>
+                <year>1925</year>
+            </book>
+            <book>
+                <title>Cien años de soledad</title>
+                <author>Gabriel García Márquez</author>
+                <genre>Realismo mágico</genre>
+                <year>1967</year>
+            </book>
+            <book>
+                <title>El Gran Gatsby</title>
+                <author>F. Scott Fitzgerald</author>
+                <genre>Ficción</genre>
+                <year>1925</year>
+            </book>
+        </books>
+    </library>
+    <library>
+        <name>BIBLIOTECA JARDIN DE MALAGA</name>
+        <location>Málaga</location>
+        <books>
+            <book>
+                <title>1984</title>
+                <author>George Orwell</author>
+                <genre>Distopía</genre>
+                <year>1949</year>
+            </book>
+            <book>
+                <title>Don Quijote de la Mancha</title>
+                <author>Miguel de Cervantes</author>
+                <genre>Novela</genre>
+                <year>1605</year>
+            </book>
+        </books>
+    </library>
+</libraries>

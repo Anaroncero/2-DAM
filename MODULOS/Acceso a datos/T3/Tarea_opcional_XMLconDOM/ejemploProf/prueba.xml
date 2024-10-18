@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE libraries [
+    <!ELEMENT libraries (library+)>
+    <!ELEMENT library (name, books)>
+    <!ATTLIST library location CDATA #REQUIRED>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT location (#PCDATA)>
+    <!ELEMENT books (book+)>
+    <!ELEMENT book (title, author, genre, year)>
+    <!ELEMENT title (#PCDATA)>
+    <!ELEMENT author (#PCDATA)>
+    <!ELEMENT genre (#PCDATA)>
+    <!ELEMENT year (#PCDATA)>
+]>
+
+<!-- Este es un archivo XML que representa información sobre bibliotecas y libros. -->
+<libraries>
+<!-- Cada elemento <library> representa una biblioteca con su nombre y ubicación. -->
+    <library location="Jaen">
+    <!-- El elemento <name> contiene el nombre de la biblioteca. -->
+        <name>Biblioteca Pública</name>
+        <books>
+            <book>
+                <title>El Gran Gatsby</title>
+                <author>F. Scott Fitzgerald</author>
+                <genre>Ficción</genre>
+                <year>1925</year>
+            </book>
+            <book>
+                <title>Cien años de soledad</title>
+                <author>Gabriel García Márquez</author>
+                <genre>Realismo mágico</genre>
+                <year>1967</year>
+            </book>
+            <book>
+                <title>El Gran Gatsby</title>
+                <author>F. Scott Fitzgerald</author>
+                <genre>Ficción</genre>
+                <year>1925</year>
+            </book>
+        </books>
+    </library>
+    <library location="Málaga">
+        <name>BIBLIOTECA JARDIN DE MALAGA</name>
+        <books>
+            <book>
+                <title>1984</title>
+                <author>George Orwell</author>
+                <genre>Distopía</genre>
+                <year>1949</year>
+            </book>
+            <book>
+                <title>Don Quijote de la Mancha</title>
+                <author>Miguel de Cervantes</author>
+                <genre>Novela</genre>
+                <year>1605</year>
+            </book>
+        </books>
+    </library>
+</libraries>
