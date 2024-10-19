@@ -1,11 +1,14 @@
+package ejemploProf;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
+import ejemploProf.XPathEjemploSAX.SAXHandler;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import java.io.File;
 
-public class XPathEjemploSAX{
+public class XPathEjemploSax {
+
     public static void main(String[] args) {
         try {
             // Configura la fábrica del analizador SAX
@@ -15,7 +18,7 @@ public class XPathEjemploSAX{
             // Crea un manejador personalizado
             SAXHandler handler = new SAXHandler();
              // Analiza el archivo XML con el manejador
-            saxParser.parse(new File("pruebaSAX.xml"), handler);
+            saxParser.parse(new File("T3\\Tarea_opcional_XML_con_SAX\\ejemploProf\\pruebaSAX.xml"), handler);
         } catch (Exception e) {
             e.printStackTrace();
         }
