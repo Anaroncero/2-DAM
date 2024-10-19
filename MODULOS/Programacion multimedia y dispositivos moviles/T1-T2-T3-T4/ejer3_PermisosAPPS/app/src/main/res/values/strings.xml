@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">PermisosAPPS_EJERCICIO_7</string>
+    <string name="permisosApps">Permisos de aplicaciones</string>
+    <string name="instagram">Instagram</string>
+    <string name="almacen">Almacen</string>
+    <string name="contactos">Contactos</string>
+    <string name="camara">Camara</string>
+    <string name="micrófono">Micrófono</string>
+    <string name="sms">SMS</string>
+    <string name="Telefono">Teléfono</string>
+    <string name="ubi">Ubicación</string>
+    <string name="vacio"> </string>
+</resources>

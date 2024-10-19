@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Ejercicio2_PantallaPerfil</string>
+    <string name="nombre">Manolo Escobar</string>
+    <string name="ciudad">España</string>
+    <string name="Conciertos">Conciertos</string>
+    <string name="Order">Order</string>
+    <string name="Total">Total</string>
+    <string name="NumConciertos">000</string>
+    <string name="NumOrder">10</string>
+    <string name="NumTotal">000</string>
+
+    <string name="Canc1">Que viva España</string>
+    <string name="Canc2">Mi Carro</string>
+    <string name="Canc3">Mujeres y vino</string>
+    <string name="Canc4">Rumbera</string>
+    <string name="Canc5">Solo te pido</string>
+    <string name="Canc6">La minifalda</string>
+    <string name="Canc7">Qué guapa estás</string>
+
+
+</resources>

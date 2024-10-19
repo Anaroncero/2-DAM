@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Ejer1_Login_Instagram</string>
+    <string name="username"></string>
+    <string name="key"></string>
+    <string name="crearCuenta">Crear Cuenta</string>
+    <string name="pedirAyuda">Ayuda</string>
+</resources>

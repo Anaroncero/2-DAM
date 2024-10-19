@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ejer5_mini_calculadora</string>
+    <string name="textViewResultado">0</string>
+</resources>
