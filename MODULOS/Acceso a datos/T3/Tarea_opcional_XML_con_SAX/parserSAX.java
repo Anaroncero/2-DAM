@@ -1,9 +1,6 @@
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
-
-import ejemploProf.XPathEjemploSAX.SAXHandler;
-
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import java.io.File;
@@ -40,7 +37,8 @@ public class parserSAX {
         private String currentElement;
 
        
-        /*El método startElement se llama cuando el analizador encuentra un elemento de apertura en el documento XML. En este método, se almacena el nombre del elemento actual en la variable currentElement. */
+        /*El método startElement se llama cuando el analizador encuentra un elemento de apertura en el documento XML. 
+        En este método, se almacena el nombre del elemento actual en la variable currentElement. */
         public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
              // Guarda el nombre del elemento actual
             currentElement = qName;

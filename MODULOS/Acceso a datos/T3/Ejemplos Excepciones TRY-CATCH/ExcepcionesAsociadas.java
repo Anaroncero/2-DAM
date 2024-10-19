@@ -1,7 +1,7 @@
 public class ExcepcionesAsociadas {
     public static void main(String[] args) {
         
-        // Excepciones asociadas a clases 
+        // Excepciones asociadas a clases. por ejemplo ArithmeticExeption a la division entre 0
         
         try {
             // Intentar dividir por cero, lo que generará una excepción
