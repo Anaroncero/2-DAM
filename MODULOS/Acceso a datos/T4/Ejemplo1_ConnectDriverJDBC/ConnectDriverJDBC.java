@@ -12,13 +12,14 @@ public class ConnectDriverJDBC {
 
     public static void main(String[] args) {
 
+        // Variables de las credenciales de la BDD
         final String usuario = "root";
         final String password = "Med@c";
         Connection dbConnection = null;
         Statement statement = null;
 
-        try {
 
+        try {
             // Carga el controlador de la base de datos
             Class.forName(driver);
             // Establecer conexión a la base de datos
