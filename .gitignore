@@ -10,3 +10,7 @@
 *.iso
 *.exe
 *.code-workspace
+/MODULOS/Desarrollo de interfaces/T4/ejemploImportar/target/
+/MODULOS/Desarrollo de interfaces/T4/Ejer_1/target/
+/MODULOS/Desarrollo de interfaces/T4/Ejer_2_Elecciones/target/
+/MODULOS/Desarrollo de interfaces/T4/Ejer_3_MejorandoDiseno/target/
