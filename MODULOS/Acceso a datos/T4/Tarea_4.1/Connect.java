@@ -65,6 +65,7 @@ public class Connect {
             } while (opcion != 5);
 
             sc.close();
+            
 
         } catch (SQLException e) {
             System.out.println("Error de SQL: " + e.getMessage());
