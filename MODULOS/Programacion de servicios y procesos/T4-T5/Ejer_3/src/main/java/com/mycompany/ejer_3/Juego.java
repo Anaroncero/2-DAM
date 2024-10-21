@@ -5,7 +5,6 @@
 package com.mycompany.ejer_3;
 
 /**
- *
  * @author Ana
  */
 public class Juego extends Thread {
