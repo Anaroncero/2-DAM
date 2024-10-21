@@ -14,7 +14,7 @@ public class Connect {
 
         // Variables para la conexión a la BDD
         final String USUARIO = "root";
-        final String PASSWORD = "12345";
+        final String PASSWORD = "Med@c";
         Connection dbConnection = null;
 
 
@@ -86,9 +86,9 @@ public class Connect {
     private static void mostrarPeliculas(Connection dbConnection) throws SQLException { // Pasamos el parametro Connection dbConnection para pasar la conexión a la bdd al método, asi no tenemos que crear conexión de nuevo dentro del método 
         String mostrarPeliculas = "SELECT * FROM peliculas";
         try (PreparedStatement statement = dbConnection.prepareStatement(mostrarPeliculas);
-             ResultSet rs = statement.executeQuery()) {
+            ResultSet rs = statement.executeQuery()) {
 
-            while (rs.next()) {
+            while (rs.next()) { // Recorrer todos los registros de la tabla
                 System.out.println("------------------------------------");
                 System.out.println("id: " + rs.getString("id"));
                 System.out.println("Nombre: " + rs.getString("nombre"));
@@ -104,12 +104,12 @@ public class Connect {
                                 "JOIN peliculas_actores pa ON p.id = pa.id_pelicula " +
                                 "JOIN actores a ON pa.id_actor = a.id WHERE a.nombre = ?";
 
-        try (PreparedStatement preparedStatement = dbConnection.prepareStatement(peliculasActor)) {
+        try (PreparedStatement preparedStatement = dbConnection.prepareStatement(peliculasActor)) { //Evitar el SQL Injection con PreparedStatement
             preparedStatement.setString(1, nombreActorInput);
             try (ResultSet rs1 = preparedStatement.executeQuery()) {
                 boolean hayResultado = false;
 
-                while (rs1.next()) {
+                while (rs1.next()) { // Seguir leyendo filas hasta que no haya más
                     hayResultado = true;
                     System.out.println(rs1.getString("pelicula"));
                 }
