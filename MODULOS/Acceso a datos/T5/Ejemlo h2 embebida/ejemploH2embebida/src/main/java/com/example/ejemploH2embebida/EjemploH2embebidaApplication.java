@@ -8,6 +8,9 @@ public class EjemploH2embebidaApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(EjemploH2embebidaApplication.class, args);
+
+
+		
 	}
 
 }
