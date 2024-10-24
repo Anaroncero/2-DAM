@@ -6,7 +6,7 @@ package com.mycompany.ejer1_evento;
 
 /**
  *
- * @author Usuario
+ * @author Ana
  */
 public class Ejer1_Evento {
 

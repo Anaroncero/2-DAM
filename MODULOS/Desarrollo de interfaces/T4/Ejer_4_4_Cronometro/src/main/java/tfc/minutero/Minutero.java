@@ -6,7 +6,7 @@ package tfc.minutero;
 
 /**
  *
- * @author Antonio Navarro
+ * @author Ana Pastor Roncero
  */
 public class Minutero {
 

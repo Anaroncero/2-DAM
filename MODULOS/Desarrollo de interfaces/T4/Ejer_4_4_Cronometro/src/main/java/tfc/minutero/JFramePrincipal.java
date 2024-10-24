@@ -15,7 +15,7 @@ import javax.swing.UIManager;
 
 /**
  *
- * @author Antonio Navarro
+ * @author Ana Pastor
  */
 public class JFramePrincipal extends javax.swing.JFrame {
     
