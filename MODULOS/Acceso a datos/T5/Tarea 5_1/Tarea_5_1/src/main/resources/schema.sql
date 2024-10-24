@@ -1,21 +1,21 @@
-CREATE TABLE peliculas (
+CREATE TABLE IF NOT EXISTS peliculas (
 	id int auto_increment primary key,
 	nombre varchar(100) not null,
     anio int not null
 );
 
-CREATE TABLE actores (
+CREATE TABLE IF NOT EXISTS actores (
 	id int auto_increment primary key,
     nombre varchar(50) not null,
     apellido varchar(50) not null
 );
 
-CREATE TABLE directores (
+CREATE TABLE IF NOT EXISTS directores (
 	id int auto_increment primary key,
     nombre varchar(50) not null
 );
 
-CREATE TABLE peliculas_actores (
+CREATE TABLE IF NOT EXISTS peliculas_actores (
 	id_pelicula int,
     id_actor int,
     
@@ -24,7 +24,7 @@ CREATE TABLE peliculas_actores (
     FOREIGN KEY (id_actor) REFERENCES actores(id)
 );
 
-CREATE TABLE directores_peliculas (
+CREATE TABLE IF NOT EXISTS directores_peliculas (
 	id_director int,
     id_pelicula int,
     
