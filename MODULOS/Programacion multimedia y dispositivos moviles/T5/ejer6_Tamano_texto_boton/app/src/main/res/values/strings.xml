@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ejer6_Tamano_texto_boton</string>
+    <string name="texto">Ana</string>
+    <string name="botonAumentar">Aumentar tamaño</string>
+    <string name="botonReducir">Reducir tamaño</string>
+    <string name="botonCambiarColor">Cambiar color</string>
+    <string name="botonTostada">Tostada</string>
+</resources>

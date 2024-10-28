@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">ejer7_abrir_otras_apps</string>
+
+    <string name="texto">Intent</string>
+    <string name="url">url</string>
+    <string name="email">email</string>
+    <string name="tlf">teléfono</string>
+
+    <string name="urlInput">""</string>
+    <string name="emailInput">""</string>
+    <string name="tlfinput">""</string>
+
+    <string name="buttonUrl">abrir</string>
+    <string name="buttonEmail">abrir</string>
+    <string name="buttonTlf">abrir</string>
+</resources>
