@@ -6,7 +6,7 @@ package com.mycompany.ejercicio_evaluable_3;
 
 /**
  *
- * @author Usuario
+ * @author Ana Pastor Roncero
  */
 public class Ejercicio_evaluable_3 {
 

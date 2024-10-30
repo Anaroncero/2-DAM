@@ -72,3 +72,38 @@ INSERT INTO ORDERS (order_id, customer_id, product_id, order_date, quantity) VAL
 (3, 3, 2, '2023-09-13', 4),
 (4, 4, 5, '2023-09-14', 1),
 (5, 5, 4, '2023-09-15', 3);
+
+DELIMITER //
+
+CREATE PROCEDURE AddCustomerAndOrder()
+BEGIN
+    -- Iniciar la transacción
+    START TRANSACTION;
+
+    SET @customer_id = 6;
+
+    -- Verificar si el cliente ya existe
+    SELECT COUNT(*) INTO @exists FROM CUSTOMER WHERE customer_id = @customer_id;
+
+    -- Intentar insertar el cliente solo si no existe
+    INSERT INTO CUSTOMER (customer_id, first_name, last_name, age)
+    VALUES (@customer_id, 'Sofia', 'Martinez', 29)
+    ON DUPLICATE KEY UPDATE customer_id = customer_id; -- No hace nada si existe
+
+    -- Comprobar si la inserción fue exitosa
+    IF @exists = 0 THEN
+        -- Insertar el pedido solo si el cliente fue insertado
+        INSERT INTO ORDERS (order_id, customer_id, product_id, order_date, quantity)
+        VALUES (6, @customer_id, 2, '2023-10-30', 2);
+
+        -- Hacer commit
+        COMMIT;
+        SELECT 'Transacción completada exitosamente' AS Message;
+    ELSE
+        -- Hacer rollback si el cliente ya existe
+        ROLLBACK;
+        SELECT 'El cliente ya existe. Se han revertido los cambios.' AS Message;
+    END IF;
+END //
+
+DELIMITER ;
