@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Ejercicio_Evaluable_2</string>
+    <string name="titulo">Adivinanzas de arboles y sus frutos</string>
+    <string name="iniciar">Iniciar</string>
+
+    <string name="informacion1">Seleccione una opción</string>
+    <string name="arrow_description">"Boton hacia atrás"</string>
+
+    <string name="titulo1">Pregunta 1</string>
+    <string name="enunciado1">Este árbol es alto y crece en zonas cálidas y desérticas. Tiene un troco recto y hojas largas  y estrechas que crecen en racimos. Sus frutos son alargados, de color marrón oscuro y tienen una pulpa dulce. ¿Qué fruto produce este árbol? </string>
+    <string name="res11">Higo</string>
+    <string name="res21">Ciruela</string>
+    <string name="res31">Dátil</string>
+    <string name="res41">Uva</string>
+    <string name="botonNext1">siguiente</string>
+
+
+    <string name="titulo2">Pregunta 2</string>
+    <string name="enunciado2">Este fruto tiene una piel gruesa y de color amarillo cuando está maduro. Su interior es jugoso, dulce y contiene varias semillas grandes. Es muy popular en climas cálidos y se usa en batidos y postres. ¿Qué fruto es?</string>
+    <string name="res12">Mango</string>
+    <string name="res22">Plátano</string>
+    <string name="res32">Melón</string>
+    <string name="res42">Papaya</string>
+
+
+    <string name="titulo3">Pregunta 3</string>
+    <string name="enunciado3">Este fruto es redondo, de color rojo brillante, con una piel fina. Es pequeño, jugoso y tiene un sabor ligeramente ácido. Crece en árboles de hoja caduca y es común en primavera. ¿Qué fruto es?</string>
+    <string name="res13">Fresa</string>
+    <string name="res23">Cereza</string>
+    <string name="res33">Ciruela</string>
+    <string name="res43">Pera</string>
+
+    <string name="titulo4">Pregunta 4</string>
+    <string name="enunciado4">Este árbol es de clima cálido y crece hasta alcanzar gran altura. Produce un fruto alargado. Su interior es cremoso y dulce ¿Qué fruto produce este árbol?</string>
+    <string name="res14">Pera</string>
+    <string name="res24">Durazno</string>
+    <string name="res34">Uva</string>
+    <string name="res44">Plátano</string>
+
+    <string name="titulo5">Pregunta 5</string>
+    <string name="enunciado5">Este árbol produce un fruto con una cáscara gruesa y rugosa, de color naranja o rojo. Este árbol crece en climas cálidos y mediterráneos ¿Qué fruto produce este árbol?</string>
+    <string name="res15">Granada</string>
+    <string name="res25">Manzana</string>
+    <string name="res35">Higo</string>
+    <string name="res45">Ciruela</string>
+
+
+</resources>

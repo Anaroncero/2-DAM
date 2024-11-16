@@ -12,6 +12,10 @@ public class Ejer_1 {
 
     public static void main(String[] args) {
         
-       
+        Hilo h1 = new Hilo("ronaldo", 2000);
+        Hilo h2 = new Hilo("messi", 3000);
+        
+        h1.start();
+        h2.start();
     }
 }

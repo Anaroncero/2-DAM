@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ejer_10_bbdd</string>
+    <string name="resultado">resultado</string>
+    <string name="botonTexto">Comprobar</string>
+    <string name="titulo">Profesores de Medac</string>
+    <string name="nombre"> </string>
+    <string name="apellido"> </string>
+</resources>

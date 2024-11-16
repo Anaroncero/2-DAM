@@ -30,7 +30,6 @@ public class Hilo extends Thread {
         try {
             for (int i = 0; i < 10; i++) {
                 System.out.println("Soy el hilo " + nombre + " y voy por la vuelta " + i);
-
                 sleep(tiempo);
             }
 

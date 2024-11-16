@@ -33,8 +33,6 @@ public class Ejer_2 {
         DivHilo d = new DivHilo(num1, num2);
         
         s.start();
-        
-
         r.start();
         m.start();
         d.start();
