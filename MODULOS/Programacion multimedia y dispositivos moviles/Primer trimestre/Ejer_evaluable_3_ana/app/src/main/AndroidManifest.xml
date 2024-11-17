@@ -13,6 +13,15 @@
         android:theme="@style/Theme.Ejer_evaluable_3_ana"
         tools:targetApi="31">
         <activity
+            android:name=".Test5Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Test4Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Test3Activity"
+            android:exported="false" />
+        <activity
             android:name=".Test2Activity"
             android:exported="false" />
         <activity

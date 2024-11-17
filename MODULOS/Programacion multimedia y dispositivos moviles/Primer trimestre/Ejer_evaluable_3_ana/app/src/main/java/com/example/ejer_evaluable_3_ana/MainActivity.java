@@ -12,8 +12,8 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     //1.Crear objetos y variables
-    private Button botonIniciar;
-    private EditText nombreInput;
+    private Button btnIniciar;
+    private EditText usuarioInput;
 
 
     @Override
@@ -22,34 +22,47 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //2.Asociar objetos Java a XML
-        botonIniciar = findViewById(R.id.buttonIniciar);
-        nombreInput = findViewById(R.id.nombreInput);
+        btnIniciar = findViewById(R.id.buttonIniciar);
+        usuarioInput = findViewById(R.id.editTextUsuario);
 
         // Botón siguiente pantalla INTENT y pasar datos clase static Datos
-        botonIniciar.setOnClickListener(new View.OnClickListener() {
+        btnIniciar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(nombreInput != null && !nombreInput.getText().toString().isEmpty()){
-                    // Obtener el nombre del EditText
-                    String nombre = nombreInput.getText().toString();
+                if (usuarioInput != null && !usuarioInput.getText().toString().isEmpty()) {
+                    // Obtener el usuario del EditText
+                    String usuario = usuarioInput.getText().toString().toLowerCase();
 
-                    // Método para pasar dato a través de clase Datos
-                    Datos.setNombre(nombre);
+                    // Verificar que no contenga espacios, no sea solo números, tenga un máximo de 20 caracteres y al menos 3
+                    if (usuario.matches("^[a-zA-Z0-9]+$") && !usuario.matches("\\d+") && usuario.length() <= 20 && usuario.length() >= 3) {
+                        // Método para pasar dato a través de clase Datos
+                        Datos.setNombre(usuario);
 
-                    // Iniciar la nueva activity
-                    Intent abrirPantalla = new Intent(MainActivity.this, Test1Activity.class);
-                    startActivity(abrirPantalla);
-
-                }else{
+                        // Iniciar la nueva activity
+                        Intent abrirPantalla = new Intent(MainActivity.this, Test1Activity.class);
+                        startActivity(abrirPantalla);
+                    } else {
+                        String mensaje;
+                        if (usuario.length() > 20) {
+                            mensaje = "El usuario no debe exceder los 20 caracteres.";
+                        } else if (usuario.length() < 3) {
+                            mensaje = "El usuario debe tener al menos 3 caracteres.";
+                        } else {
+                            mensaje = "El usuario debe contener solo letras y/o números, sin espacios.";
+                        }
+                        // Mostrar mensaje de error
+                        Toast.makeText(MainActivity.this, mensaje, Toast.LENGTH_SHORT).show();
+                    }
+                } else {
                     String mensaje = "Por favor, introduzca su nombre";
-                    //Toast personalizado en caso de que no introduzca nombre
+                    // Toast en caso de que no introduzca nombre
                     Toast.makeText(MainActivity.this, mensaje, Toast.LENGTH_SHORT).show();
-
-
                 }
-
             }
         });
+
+
+
 
 
     }
