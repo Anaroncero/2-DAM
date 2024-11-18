@@ -7,67 +7,172 @@
     android:background="@color/fondo"
     tools:context=".EndActivity">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center|center_vertical"
-        android:orientation="vertical"
-        android:paddingTop="20dp"
-        android:paddingBottom="20dp">
-
-        <TextView
-            android:id="@+id/mostrarNombre"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="40dp"
-            android:text="usuario"
-            android:textAlignment="center"
-            android:textColor="@color/primario"
-            android:textColorLink="@color/primario"
-            android:textSize="24dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/titulo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="40dp"
-            android:gravity="center"
-            android:text="Has obtenido: "
-            android:textAlignment="center"
-            android:textColor="@color/primario"
-            android:textColorHighlight="@color/primario"
-            android:textColorLink="@color/primario"
-            android:textSize="24dp"
-            android:textStyle="bold" />
-
-        <ImageView
-            android:id="@+id/imgResultado"
-            android:layout_width="201dp"
-            android:layout_height="201dp"
-            app:srcCompat="@drawable/circle" />
+        android:layout_height="match_parent" >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingLeft="20dp">
+            android:gravity="center|center_vertical"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp">
 
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="65dp"
+            <TextView
+                android:id="@+id/mostrarNombre"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/circle__2_" />
+                android:layout_gravity="center"
+                android:layout_marginBottom="40dp"
+                android:gravity="center"
+                android:hint="usuario"
+                android:text="@string/usuario"
+                android:textAlignment="center"
+                android:textColor="@color/primario"
+                android:textColorHint="@color/subtitulo"
+                android:textColorLink="@color/primario"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/mostrarRecord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="40dp"
+                android:gravity="center"
+                android:hint="record"
+                android:text="@string/record"
+                android:textColor="@color/primario"
+                android:textColorHint="@color/subtitulo"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/titulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="40dp"
+                android:gravity="center"
+                android:text="@string/hasObtenido"
+                android:textAlignment="center"
+                android:textColor="@color/primario"
+                android:textColorHighlight="@color/primario"
+                android:textColorLink="@color/primario"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="40dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="40dp">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="25dp"
+                    app:srcCompat="@drawable/circle__2_" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="25dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="13dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/correctas"
+                        android:textAlignment="center"
+                        android:textColor="@color/primario"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="13dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/erroneas"
+                        android:textColor="@color/primario"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/blanco"
+                        android:textColor="@color/primario"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/mostrarCorrectas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="13dp"
+                        android:layout_weight="1"
+                        android:gravity="center|left"
+                        android:text="@string/mostrarCorrectas" />
+
+                    <TextView
+                        android:id="@+id/mostrarErroneas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="13dp"
+                        android:layout_weight="1"
+                        android:gravity="center|left"
+                        android:text="@string/mostrarErroneas" />
+
+                    <TextView
+                        android:id="@+id/mostrarBlanco"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:gravity="center|left"
+                        android:text="@string/mostrarBlanco" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/buttonIniciar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/primario"
+                android:text="@string/iniciar" />
+
 
         </LinearLayout>
-
-        <Button
-            android:id="@+id/buttonIniciar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/primario"
-            android:text="@string/iniciar" />
-
-    </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

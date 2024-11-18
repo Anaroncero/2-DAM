@@ -4,14 +4,24 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 public class EndActivity extends AppCompatActivity {
 
     //Variables
     private Button btnIniciar;
-    private TextView mostrarNombre;
+    private TextView mostrarNombre, mostrarRecord, mostrarCorrectas, mostrarErroneas, mostrarBlanco;
+
+
+    //Almacenar datos
+    private String nombreUsuario;
+    private int puntuacion;
+    private int correctas, erroneas, blancas;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,15 +29,30 @@ public class EndActivity extends AppCompatActivity {
         setContentView(R.layout.activity_end);
 
         //2. Asociar los elementos de la interfaz con las variables en Java
-        btnIniciar = findViewById(R.id.buttonIniciar);
         mostrarNombre = findViewById(R.id.mostrarNombre);
+        mostrarRecord = findViewById(R.id.mostrarRecord);
+        mostrarCorrectas = findViewById(R.id.mostrarCorrectas);
+        mostrarErroneas = findViewById(R.id.mostrarErroneas);
+        mostrarBlanco = findViewById(R.id.mostrarBlanco);
+        btnIniciar = findViewById(R.id.buttonIniciar);
 
-        //Obtenemos el nombre de la clase Datos static
-        String nombreObtenido = Datos.getNombre();
 
-        //Mostramos el nombre cojido en el textField
-        mostrarNombre.setText(nombreObtenido);
+        //Recibir los datos de la actividad anterior
+        nombreUsuario = getIntent().getStringExtra("usuario");
+        puntuacion = getIntent().getIntExtra("puntuacion", 0);
+        correctas = getIntent().getIntExtra("correctas", 0);
+        erroneas = getIntent().getIntExtra("erroneas", 0);
+        blancas = getIntent().getIntExtra("blancas", 0);
+
+        // Mostrar los resultados en los TextViews correspondientes
+        mostrarNombre.setText(nombreUsuario);
+        mostrarCorrectas.setText(correctas);
+        mostrarErroneas.setText(erroneas);
+        mostrarBlanco.setText(blancas);  // Asumiendo que no se guarda el número de respuestas sin responder
+
 
 
     }
+
+
 }

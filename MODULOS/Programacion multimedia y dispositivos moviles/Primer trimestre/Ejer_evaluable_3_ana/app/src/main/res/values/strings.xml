@@ -5,6 +5,8 @@
 
     <string name="informacion1">Seleccione una opción</string>
     <string name="arrow_description">"Boton hacia atrás"</string>
+    <string name="botonNext">siguiente</string>
+    <string name="botonTerminar">terminar</string>
 
     <string name="titulo1">Pregunta 1</string>
     <string name="enunciado1">Este árbol es alto y crece en zonas cálidas y desérticas. Tiene un troco recto y hojas largas  y estrechas que crecen en racimos. Sus frutos son alargados, de color marrón oscuro y tienen una pulpa dulce. ¿Qué fruto produce este árbol? </string>
@@ -12,7 +14,7 @@
     <string name="res21">Ciruela</string>
     <string name="res31">Dátil</string>
     <string name="res41">Uva</string>
-    <string name="botonNext1">siguiente</string>
+
 
 
     <string name="titulo2">Pregunta 2</string>
@@ -43,6 +45,17 @@
     <string name="res25">Manzana</string>
     <string name="res35">Higo</string>
     <string name="res45">Ciruela</string>
+
+    <string name="usuario"> </string>
+    <string name="record"> </string>
+    <string name="hasObtenido">Has Obtenido: </string>
+    <string name="correctas">Correctas: </string>
+    <string name="erroneas">Erroneas: </string>
+    <string name="blanco">Sin responder: </string>
+    <string name="mostrarCorrectas"> </string>
+    <string name="mostrarErroneas"> </string>
+    <string name="mostrarBlanco"> </string>
+
 
 
 </resources>

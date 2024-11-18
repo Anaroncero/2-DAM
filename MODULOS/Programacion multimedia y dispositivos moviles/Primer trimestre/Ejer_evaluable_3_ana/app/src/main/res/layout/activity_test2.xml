@@ -52,8 +52,9 @@
                     android:layout_weight="1"
                     android:paddingTop="12dp"
                     android:paddingBottom="12dp"
-                    android:src="@drawable/progress"
-                    app:srcCompat="@drawable/progress" />
+                    android:src="@drawable/progress2"
+                    app:srcCompat="@drawable/progress2"
+                    tools:srcCompat="@drawable/progress2" />
             </LinearLayout>
 
 
@@ -154,12 +155,12 @@
                     app:cornerRadius="8dp" />
 
                 <Button
-                    android:id="@+id/buttonSiguiente"
+                    android:id="@+id/buttonTerminar"
                     android:layout_width="wrap_content"
                     android:layout_height="48dp"
                     android:layout_marginBottom="20dp"
                     android:backgroundTint="@color/primario"
-                    android:text="@string/botonNext1"
+                    android:text="@string/botonNext"
                     android:textColor="@color/secundario" />
 
             </LinearLayout>

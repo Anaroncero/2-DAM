@@ -1,0 +1,27 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="Ejercicio_4_1" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7c3ceb1b-5555-465d-9a3c-a262b9a08855">
+	<parameter name="UserInput" class="java.lang.String"/>
+	<query language="sql"><![CDATA[]]></query>
+	<background splitType="Stretch"/>
+	<title height="105" splitType="Stretch">
+		<element kind="staticText" uuid="b842e142-9160-4c19-9acc-89ef585fa0a1" x="0" y="24" width="280" height="30" fontName="SansSerif" fontSize="22.0" bold="true">
+			<text><![CDATA[REPORTE DE EJEMPLO]]></text>
+		</element>
+		<element kind="staticText" uuid="a24ecf9b-0491-45d7-a541-2ba9c0453d98" x="0" y="60" width="100" height="20">
+			<text><![CDATA[Autor: Ana Pastor]]></text>
+		</element>
+		<element kind="staticText" uuid="6a922a3f-261f-47af-a893-aa6f8ac7b497" x="0" y="80" width="180" height="20">
+			<text><![CDATA[Email: apr0050@alu.medac.es]]></text>
+		</element>
+	</title>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<element kind="staticText" uuid="baa1c346-04d8-4319-9882-58a6837bd512" x="0" y="15" width="180" height="20">
+				<text><![CDATA[Texto escrito:]]></text>
+			</element>
+			<element kind="textField" uuid="7c9e8017-7e97-4364-bf00-b141cbd2fd33" x="0" y="50" width="100" height="30">
+				<expression><![CDATA[$P{UserInput}]]></expression>
+			</element>
+		</band>
+	</detail>
+</jasperReport>
