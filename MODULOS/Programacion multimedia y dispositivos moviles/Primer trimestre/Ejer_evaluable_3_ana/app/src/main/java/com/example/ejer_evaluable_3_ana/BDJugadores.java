@@ -67,12 +67,14 @@ public class BDJugadores extends SQLiteOpenHelper {
         }
         cursor.close();
         db.close();
-        return null; // Retorna null si el jugador no existe
+        return 0; // Retorna 0 si el jugador no existe
     }
 
+
     // Método para comprobar si la nueva puntuación es un récord
-    public boolean esNuevoRecord(String nombre, int nuevaPuntuacion) {
-        Integer mejorPuntuacion = obtenerMejorPuntuacion(nombre);
-        return mejorPuntuacion == null || nuevaPuntuacion > mejorPuntuacion;
+    public boolean esNuevoRecord(String nombreUsuario, int nuevaPuntuacion) {
+        int mejorPuntuacion = obtenerMejorPuntuacion(nombreUsuario);
+        return nuevaPuntuacion > mejorPuntuacion; // Esto ahora funcionará correctamente
     }
+
 }
