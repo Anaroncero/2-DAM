@@ -63,16 +63,17 @@ public class resultadosActivity extends AppCompatActivity {
         if(porcentajeCorrectas >= 50){
             int colorGreen = getResources().getColor(R.color.green);
             progressBar.setProgressTintList(ColorStateList.valueOf(colorGreen));
-            resultadoPorc.setTextColor(colorGreen);
             resultadoPorc.setTextColor(getResources().getColor(R.color.green));
         }else{
             int colorRed = getResources().getColor(R.color.red);
             progressBar.setProgressTintList(ColorStateList.valueOf(colorRed));
             resultadoPorc.setTextColor(getResources().getColor(R.color.red));
         }
+
         // Establecer el progreso
         progressBar.setProgress(porcentajeCorrectas);
-        resultadoPorc.setText(porcentajeCorrectas);
+        resultadoPorc.setText(String.valueOf(porcentajeCorrectas));
+
 
 
 

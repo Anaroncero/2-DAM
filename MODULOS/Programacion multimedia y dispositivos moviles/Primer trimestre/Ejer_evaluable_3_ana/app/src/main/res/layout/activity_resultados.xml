@@ -65,7 +65,7 @@
                 android:id="@+id/resultadoPorcentaje"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="90"
+                android:text="@string/resultadoPorcentaje"
                 android:textAlignment="center"
                 android:textColor="@color/primario"
                 android:textSize="50dp" />
