@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/fondo"
-    tools:context=".EndActivity">
-
+    tools:context=".resultadosActivity">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
@@ -63,12 +61,24 @@
                 android:textSize="24dp"
                 android:textStyle="bold" />
 
+            <TextView
+                android:id="@+id/resultadoPorcentaje"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="90"
+                android:textAlignment="center"
+                android:textColor="@color/primario"
+                android:textSize="50dp" />
+
             <ProgressBar
                 android:id="@+id/progressBar"
-                style="?android:attr/progressBarStyle"
+                style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:layout_gravity="center" />
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:indeterminate="false"
+                android:max="100"
+                android:progress="0" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -174,5 +184,7 @@
 
         </LinearLayout>
     </ScrollView>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

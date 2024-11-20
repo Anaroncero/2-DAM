@@ -44,7 +44,7 @@ public class Test1Activity extends AppCompatActivity {
         //2. Asociar los objetos java a los componentes xml
         btnAtras = findViewById(R.id.buttonAtras);
         img = findViewById(R.id.imagen);
-        btnSiguiente = findViewById(R.id.buttonTerminar);
+        btnSiguiente = findViewById(R.id.buttonSiguiente);
         btnRes1 = findViewById(R.id.res1);
         btnRes2 = findViewById(R.id.res2);
         btnRes3 = findViewById(R.id.res3);

@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ejer_evaluable_3_ana"
         tools:targetApi="31">
+
         <activity
             android:name=".Test5Activity"
             android:exported="false" />
@@ -37,8 +38,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".EndActivity"
-            android:exported="true" />
+            android:name=".resultadosActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

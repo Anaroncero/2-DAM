@@ -40,7 +40,7 @@ public class Test4Activity extends AppCompatActivity {
 
         // Asociar objetos con elementos XML
         btnAtras = findViewById(R.id.buttonAtras);
-        btnSiguiente = findViewById(R.id.buttonTerminar);
+        btnSiguiente = findViewById(R.id.buttonSiguiente);
         img = findViewById(R.id.imagen);
         btnRes1 = findViewById(R.id.res1);
         btnRes2 = findViewById(R.id.res2);

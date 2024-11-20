@@ -40,7 +40,7 @@ public class Test5Activity extends AppCompatActivity {
 
         // Asociar objetos con elementos xml
         btnAtras = findViewById(R.id.buttonAtras);
-        btnSiguiente = findViewById(R.id.buttonTerminar);
+        btnSiguiente = findViewById(R.id.buttonSiguiente);
         img = findViewById(R.id.imagen);
         btnRes1 = findViewById(R.id.res1);
         btnRes2 = findViewById(R.id.res2);
@@ -76,7 +76,6 @@ public class Test5Activity extends AppCompatActivity {
             startActivity(abrirPantalla);
         });
 
-
         // Botones de respuesta
         btnRes1.setOnClickListener(view -> comprobarRespuesta(btnRes1, false));
         btnRes2.setOnClickListener(view -> comprobarRespuesta(btnRes2, false));
@@ -92,7 +91,7 @@ public class Test5Activity extends AppCompatActivity {
                 }
 
                 // Pasar los datos a la siguiente actividad (o pantalla)
-                Intent abrirPantalla = new Intent(Test5Activity.this, EndActivity.class); // O la actividad que corresponda
+                Intent abrirPantalla = new Intent(Test5Activity.this, resultadosActivity.class); // O la actividad que corresponda
 
                 // Pasar los datos de usuario, puntuación y contadores
                 abrirPantalla.putExtra("usuario", nombreUsuario);

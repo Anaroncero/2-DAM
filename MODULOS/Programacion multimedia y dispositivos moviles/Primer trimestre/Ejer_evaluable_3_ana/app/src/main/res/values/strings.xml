@@ -16,7 +16,6 @@
     <string name="res41">Uva</string>
 
 
-
     <string name="titulo2">Pregunta 2</string>
     <string name="enunciado2">Este fruto tiene una piel gruesa y de color amarillo cuando está maduro. Su interior es jugoso, dulce y contiene varias semillas grandes. Es muy popular en climas cálidos y se usa en batidos y postres. ¿Qué fruto es?</string>
     <string name="res12">Mango</string>
@@ -55,7 +54,7 @@
     <string name="mostrarCorrectas"> </string>
     <string name="mostrarErroneas"> </string>
     <string name="mostrarBlanco"> </string>
-
+    <string name="resultadoPorcentaje"> </string>
 
 
 </resources>
