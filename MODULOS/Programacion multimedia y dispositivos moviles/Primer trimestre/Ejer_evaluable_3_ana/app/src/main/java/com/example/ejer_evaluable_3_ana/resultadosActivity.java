@@ -76,6 +76,19 @@ public class resultadosActivity extends AppCompatActivity {
 
 
 
+        // //Inicializar el helper de base de datos
+        BDJugadores bdJugadores = new BDJugadores(this);
+        bdJugadores.insertarOActualizarJugador(nombreUsuario, porcentajeCorrectas);
+
+        // Verificar si es un nuevo récord
+        if (bdJugadores.esNuevoRecord(nombreUsuario, porcentajeCorrectas)) {
+            mostrarRecord.setText(porcentajeCorrectas + " - ¡Has tenido un nuevo récord!");
+        } else {
+            mostrarRecord.setText("Mejor puntuación: " + bdJugadores.obtenerMejorPuntuacion(nombreUsuario));
+        }
+
+
+
 
 
 

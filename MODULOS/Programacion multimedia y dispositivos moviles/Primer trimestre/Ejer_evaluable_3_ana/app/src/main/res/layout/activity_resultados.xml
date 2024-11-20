@@ -18,6 +18,20 @@
             android:paddingBottom="20dp">
 
             <TextView
+                android:id="@+id/mostrarRecord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="40dp"
+                android:gravity="center"
+                android:hint="record"
+                android:text="@string/record"
+                android:textColor="@color/primario"
+                android:textColorHint="@color/subtitulo"
+                android:textSize="20dp" />
+
+            <TextView
                 android:id="@+id/mostrarNombre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -32,19 +46,6 @@
                 android:textColorLink="@color/primario"
                 android:textSize="24dp"
                 android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/mostrarRecord"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="40dp"
-                android:gravity="center"
-                android:hint="record"
-                android:text="@string/record"
-                android:textColor="@color/primario"
-                android:textColorHint="@color/subtitulo"
-                android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/titulo"
@@ -74,7 +75,7 @@
                 android:id="@+id/progressBar"
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="200dp"
-                android:layout_height="80dp"
+                android:layout_height="72dp"
                 android:layout_gravity="center"
                 android:indeterminate="false"
                 android:max="100"
@@ -152,7 +153,10 @@
                         android:layout_marginBottom="13dp"
                         android:layout_weight="1"
                         android:gravity="center|left"
-                        android:text="@string/mostrarCorrectas" />
+                        android:text="@string/mostrarCorrectas"
+                        android:textColor="@color/primario"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/mostrarErroneas"
@@ -161,7 +165,10 @@
                         android:layout_marginBottom="13dp"
                         android:layout_weight="1"
                         android:gravity="center|left"
-                        android:text="@string/mostrarErroneas" />
+                        android:text="@string/mostrarErroneas"
+                        android:textColor="@color/primario"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/mostrarBlanco"
@@ -169,7 +176,10 @@
                         android:layout_height="50dp"
                         android:layout_weight="1"
                         android:gravity="center|left"
-                        android:text="@string/mostrarBlanco" />
+                        android:text="@string/mostrarBlanco"
+                        android:textColor="@color/primario"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
             </LinearLayout>

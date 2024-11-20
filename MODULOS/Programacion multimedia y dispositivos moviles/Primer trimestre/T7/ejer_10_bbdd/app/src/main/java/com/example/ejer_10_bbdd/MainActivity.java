@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText apellido;
     private Button botonComprobar;
     private TextView resultado;
-    private DatabaseHelper db; //Instancia de la bbdd
+    private DatabaseHelper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
