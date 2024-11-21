@@ -8,16 +8,26 @@ package com.mycompany.ejer3_estanco;
  *
  * @author Ana
  */
-public class Estanquero extends Thread{
-    
+public class Estanquero extends Thread {
+
     //Atributos
-    String nombre;
-    Estanco estanco;
-    
+    private Estanco estanco;
+
     //Constructor
-    public Estanquero(String nombre, Estanco estanco){
-        this.nombre = nombre;
+    public Estanquero(Estanco estanco) {
         this.estanco = estanco;
     }
-            
+
+    public void run() {
+        while (true) {
+            //Pone materiales
+            estanco.ponerMateriales();
+            try {
+                sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+           
+        }
+    }
 }

@@ -25,8 +25,6 @@ public class Mesa {
 
     //SECCIONES CRITICAS. 
     //coger tenedoresDisponibles
-    
-    
     public synchronized void cogerTenedores(int numFilosofo) { //el filosofo 3.. coge
 
         int tenedorDer, tenedorIzq;

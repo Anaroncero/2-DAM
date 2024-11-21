@@ -15,12 +15,12 @@ public class Ejer3_Estanco {
         Estanco estanco = new Estanco();
         
         //Creamos a tres fumadores con diferentes ingredientes
-        Fumador fumadorPapel = new Fumador("papel", estanco);
+        Fumador fumadorPapel = new Fumador("papel", estanco); //Hilo funcionan simulaneamente
         Fumador fumadorTabaco = new Fumador ("tabaco", estanco);
         Fumador fumadorFosforos = new Fumador("cerilla", estanco);
         
         //Creamos el estanquero
-         Estanquero estanquero = new Estanquero("Pepe", estanco);
+         Estanquero estanquero = new Estanquero(estanco); //Hilo funcionan simultáneamente
          
          //Inicializamos los hilos
          fumadorPapel.start();
