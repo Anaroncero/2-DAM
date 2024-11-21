@@ -1,7 +1,6 @@
 package com.example.ejer_evaluable_3_ana;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
@@ -19,7 +18,6 @@ public class resultadosActivity extends AppCompatActivity {
 
     // Almacenar datos
     private String nombreUsuario;
-    private int puntuacion;
     private int correctas, erroneas, blancas;
 
     @Override
@@ -39,7 +37,6 @@ public class resultadosActivity extends AppCompatActivity {
 
         // Recibir los datos de la actividad anterior
         nombreUsuario = getIntent().getStringExtra("usuario");
-        puntuacion = getIntent().getIntExtra("puntuacion", 0);
         correctas = getIntent().getIntExtra("correctas", 0);
         erroneas = getIntent().getIntExtra("erroneas", 0);
         blancas = getIntent().getIntExtra("blancas", 0);
@@ -51,35 +48,35 @@ public class resultadosActivity extends AppCompatActivity {
         mostrarBlanco.setText(String.valueOf(blancas));
 
         // Calcular el porcentaje de respuestas correctas
-        int porcentajeCorrectas = (int) ((correctas / 5.0) * 100); // Suponiendo que 5 es el total de preguntas
+        int totalPreguntas = 5; // Suponiendo que 5 es el total de preguntas
+        int porcentajeCorrectas = (int) ((correctas / (float) totalPreguntas) * 100);
 
         // Configurar el color de la Progress Bar y el texto según el porcentaje
+        int color;
         if (porcentajeCorrectas >= 50) {
-            int colorGreen = getResources().getColor(R.color.green);
-            progressBar.setProgressTintList(ColorStateList.valueOf(colorGreen));
-            resultadoPorc.setTextColor(colorGreen);
+            color = getResources().getColor(R.color.green);
         } else {
-            int colorRed = getResources().getColor(R.color.red);
-            progressBar.setProgressTintList(ColorStateList.valueOf(colorRed));
-            resultadoPorc.setTextColor(colorRed);
+            color = getResources().getColor(R.color.red);
         }
-
-        // Establecer el progreso
+        progressBar.setProgressTintList(ColorStateList.valueOf(color));
         progressBar.setProgress(porcentajeCorrectas);
-        resultadoPorc.setText(String.valueOf(porcentajeCorrectas) + "%"); // Añadir '%' al texto
+        resultadoPorc.setText(String.valueOf(porcentajeCorrectas) + "%");
 
         // Inicializar el helper de base de datos
         BDJugadores bdJugadores = new BDJugadores(this);
 
-        // Insertar o actualizar el jugador
-        bdJugadores.insertarOActualizarJugador(nombreUsuario, porcentajeCorrectas);
+        // Obtener la mejor puntuación anterior
+        int mejorPuntuacion = bdJugadores.obtenerMejorPuntuacion(nombreUsuario);
+
+        // Insertar o actualizar el jugador y verificar si es un nuevo récord
+        boolean esNuevoRecord = bdJugadores.insertarOActualizarJugador(nombreUsuario, porcentajeCorrectas);
 
         // Verificar si es un nuevo récord
-        if (bdJugadores.esNuevoRecord(nombreUsuario, porcentajeCorrectas)) {
+        if (esNuevoRecord && porcentajeCorrectas > mejorPuntuacion) {
             mostrarRecord.setText(porcentajeCorrectas + " - ¡Has tenido un nuevo récord!");
+            mostrarRecord.setTextColor(color);
         } else {
-            int mejorPuntuacion = bdJugadores.obtenerMejorPuntuacion(nombreUsuario);
-            mostrarRecord.setText("puntuación: " + mejorPuntuacion + " / 100");
+            mostrarRecord.setText("Puntuación: " + mejorPuntuacion + " / 100");
         }
 
         // Configurar el botón para iniciar la actividad principal
@@ -87,7 +84,6 @@ public class resultadosActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent abrirPantalla = new Intent(resultadosActivity.this, MainActivity.class);
-
                 startActivity(abrirPantalla);
             }
         });
