@@ -81,4 +81,6 @@ public class BDJugadores extends SQLiteOpenHelper {
         db.close();
         return 0; // Retorna 0 si el jugador no existe
     }
+
+
 }

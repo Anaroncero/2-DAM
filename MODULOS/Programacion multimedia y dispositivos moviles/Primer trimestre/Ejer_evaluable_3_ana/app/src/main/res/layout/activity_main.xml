@@ -54,6 +54,7 @@
             android:layout_marginBottom="70dp"
             android:backgroundTint="@color/primario"
             android:text="@string/iniciar" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

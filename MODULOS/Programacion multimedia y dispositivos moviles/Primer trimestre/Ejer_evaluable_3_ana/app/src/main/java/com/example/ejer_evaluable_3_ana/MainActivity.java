@@ -34,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
                 if (!usuario.isEmpty()) {
                     // Validar que el nombre solo contenga letras y números, no sea solo números, y tenga una longitud válida
                     if (usuario.matches("^[a-zA-Z0-9]+$") && !usuario.matches("\\d+") && usuario.length() <= 9 && usuario.length() >= 3) {
+                        // Inicializar la base de datos
+
 
                         // Iniciar la nueva activity (Test1Activity) y pasar el nombre del usuario
                         Intent abrirPantalla = new Intent(MainActivity.this, Test1Activity.class);
