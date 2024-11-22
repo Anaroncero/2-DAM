@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">fireBaseLogin</string>
+
+    <string name="usuario">usuario</string>
+    <string name="password">password</string>
+
+    <string name="tutorialText">Tutorial Google Firebase</string>
+
+    <string name="buttonIniciar">Iniciar Sesión</string>
+    <string name="buttonProbar">Registro</string>
+</resources>

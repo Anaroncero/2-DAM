@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1004850007675",
+    "project_id": "ejemplofirebase-eda90",
+    "storage_bucket": "ejemplofirebase-eda90.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1004850007675:android:4686a7803e0f8fa92fdcde",
+        "android_client_info": {
+          "package_name": "com.example.firebaselogin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCkzazrlgpRoMdtpTX8rSBUdqbBrcSOAM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1004850007675:android:95aebc86d46e478c2fdcde",
+        "android_client_info": {
+          "package_name": "com.example.loginfirebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCkzazrlgpRoMdtpTX8rSBUdqbBrcSOAM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

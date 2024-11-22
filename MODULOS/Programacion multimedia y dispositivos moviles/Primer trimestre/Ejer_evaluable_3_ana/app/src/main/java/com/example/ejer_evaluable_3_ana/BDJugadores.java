@@ -1,86 +1,93 @@
 package com.example.ejer_evaluable_3_ana;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 public class BDJugadores extends SQLiteOpenHelper {
 
-    private static final String SQLCREATE = "CREATE TABLE Jugadores (id INTEGER PRIMARY KEY AUTOINCREMENT, nombre TEXT, puntuacion INTEGER)";
-    private static final String SQLDROP = "DROP TABLE IF EXISTS Jugadores";
+    private static final String DATABASE_NAME = "Usuarios.db";
+    private static final int DATABASE_VERSION = 2;  // Incrementa la versión si ya existía la base de datos
 
-    public static final int DATABASE_VERSION = 1;
-    public static final String DATABASE_NAME = "DBJugadores.db";
+    // SQL para crear la tabla con el nombre de columna correcto
+    private static final String SQL_CREATE_TABLE = "CREATE TABLE Usuarios (Usuario TEXT PRIMARY KEY, nota INTEGER)";
 
-    // Constructor de la BBDD
+    // SQL para eliminar la tabla (útil para las actualizaciones)
+    private static final String SQL_DROP_TABLE = "DROP TABLE IF EXISTS Usuarios";
+
+    // Constructor de la clase DatabaseHelper
     public BDJugadores(Context contexto) {
         super(contexto, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
-    // Métodos obligatorios onCreate y onUpgrade
+    // Este método es llamado cuando se crea la base de datos
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(SQLCREATE);
+        db.execSQL(SQL_CREATE_TABLE);  // Crear la tabla
     }
 
+    // Este método es llamado cuando la versión de la base de datos cambia (para realizar la actualización)
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL(SQLDROP);
-        onCreate(db);
+        db.execSQL(SQL_DROP_TABLE);   // Eliminar la tabla anterior
+        db.execSQL(SQL_CREATE_TABLE);  // Crear la nueva tabla
+        verificarEsquema(db);  // Verificar el esquema después de la actualización
     }
 
-    // Método para insertar o actualizar la puntuación de un jugador
-    public boolean insertarOActualizarJugador(String nombre, int puntuacion) {
-        SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues valores = new ContentValues();
-        valores.put("nombre", nombre);
-        valores.put("puntuacion", puntuacion);
-
-        boolean esNuevoRecord = false;
-
-        // Comprobar si el jugador ya existe
-        Cursor cursor = db.query("Jugadores", new String[]{"puntuacion"}, "nombre = ?", new String[]{nombre}, null, null, null);
-
+    // Método para verificar el esquema de la base de datos y ver las columnas de la tabla
+    public void verificarEsquema(SQLiteDatabase db) {
+        Cursor cursor = db.rawQuery("PRAGMA table_info(Usuarios);", null);
         if (cursor != null) {
-            if (cursor.moveToFirst()) {
-                // Si el jugador existe, obtener su puntuación actual
-                int puntuacionActual = cursor.getInt(0);
-                // Comparar la nueva puntuación con la actual
-                if (puntuacion > puntuacionActual) {
-                    // Si la nueva puntuación es mayor, actualizar
-                    db.update("Jugadores", valores, "nombre = ?", new String[]{nombre});
-                    esNuevoRecord = true; // Se ha establecido un nuevo récord
-                }
-            } else {
-                // Si no existe, insertar nuevo jugador
-                db.insert("Jugadores", null, valores);
-                esNuevoRecord = true; // Es un nuevo jugador, por lo tanto, es un récord
-            }
-            cursor.close(); // Cerrar el cursor después de usarlo
-        }
-
-        db.close(); // Cerrar la base de datos
-        return esNuevoRecord; // Retorna si se ha insertado o actualizado
-    }
-
-    // Método para obtener la mejor puntuación de un jugador
-    public Integer obtenerMejorPuntuacion(String nombre) {
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.query("Jugadores", new String[]{"puntuacion"}, "nombre = ?", new String[]{nombre}, null, null, null);
-        if (cursor != null) {
-            if (cursor.moveToFirst()) {
-                int puntuacion = cursor.getInt(0);
-                cursor.close();
-                db.close();
-                return puntuacion;
+            while (cursor.moveToNext()) {
+                @SuppressLint("Range") String columnName = cursor.getString(cursor.getColumnIndex("name"));
+                Log.d("DatabaseHelper", "Columna: " + columnName);  // Imprime el nombre de cada columna
             }
             cursor.close();
         }
-        db.close();
-        return 0; // Retorna 0 si el jugador no existe
     }
 
+    // Método para insertar un nuevo usuario con su puntuación inicial
+    public void insertarUsuario(String usuario) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues valores = new ContentValues();
+        valores.put("Usuario", usuario);
+        valores.put("nota", 0);  // Inicializamos la nota en 0
+        db.insert("Usuarios", null, valores);
+        db.close();
+    }
 
+    // Método para obtener la mejor puntuación de un usuario
+    public int obtenerMejorPuntuacion(String usuario) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT nota FROM Usuarios WHERE Usuario = ?", new String[] {usuario});
+
+        if (cursor != null && cursor.moveToFirst()) {
+            int columnIndex = cursor.getColumnIndex("nota");
+            if (columnIndex >= 0) {  // Verifica si la columna "nota" existe
+                int puntuacion = cursor.getInt(columnIndex);
+                cursor.close();
+                return puntuacion;  // Retorna la puntuación actual del usuario
+            } else {
+                cursor.close();
+                return -1;  // Retorna -1 si la columna "nota" no existe
+            }
+        } else {
+            cursor.close();
+            return -1;  // Retorna -1 si el usuario no existe
+        }
+    }
+
+    // Método para actualizar la puntuación de un usuario
+    public boolean actualizarNota(String usuario, int nuevaNota) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues valores = new ContentValues();
+        valores.put("nota", nuevaNota);
+        db.update("Usuarios", valores, "Usuario = ?", new String[]{usuario});
+        db.close();
+        return true;
+    }
 }

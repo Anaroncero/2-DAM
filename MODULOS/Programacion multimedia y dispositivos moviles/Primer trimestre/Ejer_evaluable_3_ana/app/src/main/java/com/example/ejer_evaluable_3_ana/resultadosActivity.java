@@ -69,7 +69,7 @@ public class resultadosActivity extends AppCompatActivity {
         int mejorPuntuacion = bdJugadores.obtenerMejorPuntuacion(nombreUsuario);
 
         // Insertar o actualizar el jugador y verificar si es un nuevo récord
-        boolean esNuevoRecord = bdJugadores.insertarOActualizarJugador(nombreUsuario, porcentajeCorrectas);
+        boolean esNuevoRecord = bdJugadores.actualizarNota(nombreUsuario, porcentajeCorrectas);
 
         // Verificar si es un nuevo récord
         if (esNuevoRecord && porcentajeCorrectas > mejorPuntuacion) {
