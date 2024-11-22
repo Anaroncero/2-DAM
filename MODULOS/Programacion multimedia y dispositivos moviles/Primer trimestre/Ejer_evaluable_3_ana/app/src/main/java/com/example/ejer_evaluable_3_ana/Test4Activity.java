@@ -13,7 +13,6 @@ import android.widget.ImageView;
 public class Test4Activity extends AppCompatActivity {
 
     // Variables
-    private ImageButton btnAtras;
     private Button btnSiguiente;
     private Button btnRes1, btnRes2, btnRes3, btnRes4;
     private ImageView img;
@@ -39,7 +38,6 @@ public class Test4Activity extends AppCompatActivity {
         setContentView(R.layout.activity_test4);
 
         // Asociar objetos con elementos XML
-        btnAtras = findViewById(R.id.buttonAtras);
         btnSiguiente = findViewById(R.id.buttonSiguiente);
         img = findViewById(R.id.imagen);
         btnRes1 = findViewById(R.id.res1);
@@ -69,12 +67,6 @@ public class Test4Activity extends AppCompatActivity {
         sonidoCorrecto = soundPool.load(this, R.raw.respuesta_correcta_sonido, 1);
         sonidoIncorrecto = soundPool.load(this, R.raw.respuesta_incorrecta_sonido, 1);
 
-        // Botón Atrás
-        btnAtras.setOnClickListener(view -> {
-            // Regresar a la actividad anterior
-            Intent abrirPantalla = new Intent(Test4Activity.this, Test3Activity.class);
-            startActivity(abrirPantalla);
-        });
 
 
         // Botones de respuesta

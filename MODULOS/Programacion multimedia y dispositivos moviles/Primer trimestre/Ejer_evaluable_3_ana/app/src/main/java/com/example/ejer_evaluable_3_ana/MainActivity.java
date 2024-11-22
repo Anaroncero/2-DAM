@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
                 // Verificar si el usuario no está vacío
                 if (!usuario.isEmpty()) {
                     // Validar que el nombre solo contenga letras y números, no sea solo números, y tenga una longitud válida
-                    if (usuario.matches("^[a-zA-Z0-9]+$") && !usuario.matches("\\d+") && usuario.length() <= 9 && usuario.length() >= 3) {
+                    if (usuario.matches("^[a-zA-Z0-9]+$") && !usuario.matches("\\d+") && usuario.length() <= 18 && usuario.length() >= 3) {
                         // Inicializar la base de datos
 
 

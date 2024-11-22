@@ -42,13 +42,13 @@ public class Test1Activity extends AppCompatActivity {
         setContentView(R.layout.activity_test1);
 
         //2. Asociar los objetos java a los componentes xml
-        btnAtras = findViewById(R.id.buttonAtras);
         img = findViewById(R.id.imagen);
         btnSiguiente = findViewById(R.id.buttonSiguiente);
         btnRes1 = findViewById(R.id.res1);
         btnRes2 = findViewById(R.id.res2);
         btnRes3 = findViewById(R.id.res3);
         btnRes4 = findViewById(R.id.res4);
+        btnAtras = findViewById(R.id.buttonAtras);
 
         //Obtener el nombre del usuario desde el Intent
         String nombreUsuario = getIntent().getStringExtra("usuario");

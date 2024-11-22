@@ -33,22 +33,13 @@
                 android:outlineProvider="none">
 
                 <!-- Arrow alineado a la izquierda -->
-                <ImageButton
-                    android:id="@+id/buttonAtras"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:layout_gravity="start"
-                    android:backgroundTint="#00FFFFFF"
-                    android:contentDescription="@string/arrow_description"
-                    android:src="@drawable/chevron_left" />
 
                 <!-- Imagen centrada -->
                 <ImageView
                     android:id="@+id/imageView3"
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="48dp"
                     android:layout_gravity="center"
-                    android:layout_marginRight="48dp"
                     android:layout_weight="1"
                     android:paddingTop="12dp"
                     android:paddingBottom="12dp"

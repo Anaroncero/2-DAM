@@ -13,7 +13,6 @@ import android.widget.ImageView;
 public class Test2Activity extends AppCompatActivity {
 
     // 1. Variables objeto
-    private ImageButton btnAtras;
     private Button btnSiguiente;
     private Button btnRes1, btnRes2, btnRes3, btnRes4;
     private ImageView img;
@@ -39,7 +38,6 @@ public class Test2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_test2);
 
         // 2. Asociar objetos java a componentes xml
-        btnAtras = findViewById(R.id.buttonAtras);
         btnSiguiente = findViewById(R.id.buttonSiguiente);
         btnRes1 = findViewById(R.id.res1);
         btnRes2 = findViewById(R.id.res2);
@@ -71,12 +69,6 @@ public class Test2Activity extends AppCompatActivity {
 
         // 3. Métodos..
 
-        // Botón hacia atrás
-        btnAtras.setOnClickListener(view -> {
-            // Pantalla anterior
-            Intent abrirPantalla = new Intent(Test2Activity.this, Test1Activity.class);
-            startActivity(abrirPantalla);
-        });
 
         // Respuestas botones, llamamos al método comprobarRespuesta
         btnRes1.setOnClickListener(view -> comprobarRespuesta(btnRes1, false));

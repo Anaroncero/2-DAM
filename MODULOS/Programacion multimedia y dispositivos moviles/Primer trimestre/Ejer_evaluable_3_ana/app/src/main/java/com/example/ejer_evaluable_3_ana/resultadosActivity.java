@@ -73,7 +73,7 @@ public class resultadosActivity extends AppCompatActivity {
 
         // Verificar si es un nuevo récord
         if (esNuevoRecord && porcentajeCorrectas > mejorPuntuacion) {
-            mostrarRecord.setText(porcentajeCorrectas + " - ¡Has tenido un nuevo récord!");
+            mostrarRecord.setText(porcentajeCorrectas + " - ¡Has tenido un RECORD, respecto la última vez!");
             mostrarRecord.setTextColor(color);
         } else {
             mostrarRecord.setText("Puntuación: " + mejorPuntuacion + " / 100");
