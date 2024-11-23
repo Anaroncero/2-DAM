@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="abrirNavegador">Abrir navegador</string>
+    <string name="abrirCorreo">Abrir correo</string>
+    <string name="abrirTelefono">Abrir teléfono</string>
+
+    <string name="navegador">navegador</string>
+    <string name="correo">correo</string>
+    <string name="telefono">teléfono</string>
+
+</resources>

@@ -10,26 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7056e754-9dc0-435b-8597-c974b599f403" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/loginfirebase/MainActivity2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../IMG_6513.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Primer trimestre/T1-T2-T3-T4/Prueba1/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Primer trimestre/T1-T2-T3-T4/Prueba1/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Primer trimestre/T1-T2-T3-T4/Prueba1/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Primer trimestre/T1-T2-T3-T4/Prueba1/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Primer trimestre/T5/ejer5_Mini_Calculadora/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Primer trimestre/T5/ejer5_Mini_Calculadora/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Primer trimestre/T6/Ejer_evaluable_2_test/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Primer trimestre/T6/Ejer_evaluable_2_test/.idea/Ejer_evaluable_2_test.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Primer trimestre/T6/Ejer_evaluable_2_test/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Primer trimestre/T6/Ejer_evaluable_2_test/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Primer trimestre/T6/Ejer_evaluable_2_test/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Primer trimestre/T6/Ejer_evaluable_2_test/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Primer trimestre/T7/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Primer trimestre/T7/.idea/T7.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Primer trimestre/T7/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Primer trimestre/T7/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.~lock.Manual_android.odt#" beforeDir="false" afterPath="$PROJECT_DIR$/../.~lock.Manual_android.odt#" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +46,7 @@
     "RunOnceActivity.cidr.known.project.marker": "true",
     "cidr.known.project.marker": "true",
     "com.android.tools.idea.devicemanager.tab": "Physical",
-    "last_opened_file_path": "D:/GitHub/2-DAM/MODULOS/Programacion multimedia y dispositivos moviles/Segundo trimestre/T10/loginFirebase"
+    "last_opened_file_path": "D:/GitHub/2-DAM/MODULOS/Programacion multimedia y dispositivos moviles/loginFirebase"
   }
 }]]></component>
   <component name="RecentsManager">
