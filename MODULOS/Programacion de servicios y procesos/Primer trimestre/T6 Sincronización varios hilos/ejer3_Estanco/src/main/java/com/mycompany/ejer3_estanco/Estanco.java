@@ -6,36 +6,69 @@ package com.mycompany.ejer3_estanco;
 
 /**
  *
- * @author Ana 
- * 
+ * @author Ana
+ *
  */
 public class Estanco { //Monitor
 
-    private String[] materialesDisponibles = new String[2];
-
-    private String[] almacenMateriales = {"cerillas", "tabaco", "papel"};
+    private boolean hayIngredientes = false; //bandera
+    private String[] ingredientes = {"papel", "tabaco", "cerilla"};
+    private int ingredienteAcoger1, ingredienteAcoger2;
+    private int ingredienteGenerado1, ingredienteGenerado2;
 
     //Métodos críticos añadir y quitar productos
-    public synchronized void ponerMateriales() {
+    public synchronized void colocarIngredientes() {
+        
+        while (hayIngredientes) {
+            try {
+                wait(); // Espera a que los fumadores tomen los ingredientes y avisen
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
 
-        //Array ingredientes disponibles y otro array con el almacen de materiales 
-        int num1 = (int) ((Math.random()) * almacenMateriales.length);
-        int num2;
+        // Coloca los ingredientes aleatoriamente
+        ingredienteGenerado1 = (int)(Math.random()*3); // 0: papel, 1: tabaco, 2: cerillas
+        do{
+            ingredienteGenerado2 = (int)(Math.random()*3); // 0: papel, 1: tabaco, 2: cerillas
+        }while(ingredienteGenerado1==ingredienteGenerado2);
+        
+        System.out.println("Estanquero coloca el ingrediente: " + ingredientes[ingredienteGenerado1]);
+        System.out.println("Estanquero coloca el ingrediente: " + ingredientes[ingredienteGenerado2]);
 
-        //que no se repita los mismos materiales (num Aleatorios)
-        do {
-            num2 = (int) ((Math.random()) * almacenMateriales.length);
-        } while (num1 == num2);
-
-        materialesDisponibles[0] = almacenMateriales[num1];
-        materialesDisponibles[1] = almacenMateriales[num2];
-
-        System.out.println("Estanquero coloca el ingrediente: " + materialesDisponibles[0]);
-        System.out.println("Estanquero coloca segundo ingrediente: " + materialesDisponibles[1]);
-
-        notifyAll(); //notifico que ha puesto dos ingredientes a los fumadores
+        hayIngredientes = true;
+        notifyAll(); // Despierta a los fumadores
     }
 
-   
-}
 
+
+    public synchronized void cogerIngredientes(int ingredienteFumador) {
+        
+        //Compruebo qué ingredientes me tocarían coger
+        if (ingredienteFumador==0){
+            ingredienteAcoger1=1;
+            ingredienteAcoger2=2;
+        } else if(ingredienteFumador==1){
+            ingredienteAcoger1=0;
+            ingredienteAcoger2=2;
+        } else{
+            ingredienteAcoger1=0;
+            ingredienteAcoger2=1;
+        }
+
+
+        //Espero si no hay ingredientes en el mostrador
+        while (!hayIngredientes || ((ingredienteGenerado1 == ingredienteFumador)
+        || (ingredienteGenerado2 == ingredienteFumador))) {
+
+                try {
+                    wait();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        hayIngredientes=false;
+        
+        notifyAll(); // Despierta al estanquero
+    }
+}

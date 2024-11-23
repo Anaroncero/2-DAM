@@ -21,7 +21,7 @@ public class Estanquero extends Thread {
     public void run() {
         while (true) {
             //Pone materiales
-            estanco.ponerMateriales();
+            estanco.colocarIngredientes();
             try {
                 sleep(100);
             } catch (InterruptedException e) {
