@@ -1,4 +1,6 @@
-package com.example.loginfirebase;
+package com.example.ejercicio11_firebase;
+
+import static android.content.ContentValues.TAG;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -16,7 +19,9 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+
 public class MainActivity extends AppCompatActivity {
+
     private EditText usuario;
     private EditText password;
     private Button login;
@@ -24,16 +29,20 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mAuth; //Objeto bbddd Firebase para auth.
 
 
+
+
     //private DatabaseReference db; // Referencia a Realtime Database
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        usuario = findViewById(R.id.editUser);
-        password = findViewById(R.id.editPassword);
-        login = findViewById(R.id.iniciarSesion);
-        registro = findViewById(R.id.registrarse);
+        usuario = findViewById(R.id.editTextUsuario);
+        password = findViewById(R.id.editTextPassword);
+        login = findViewById(R.id.button);
+        registro = findViewById(R.id.button2);
 
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
