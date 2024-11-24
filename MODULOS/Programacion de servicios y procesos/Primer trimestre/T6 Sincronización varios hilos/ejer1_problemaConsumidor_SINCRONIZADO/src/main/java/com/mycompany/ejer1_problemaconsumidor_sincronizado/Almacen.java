@@ -22,9 +22,10 @@ public class Almacen {
 
     //SECCIONES CRITICAS. 
     //Porque es el que genera fallos al acceder al array
-    //Synchronized para que Java no permita a varios hilos. No puedo permitir que dos hilos lo hagan a la vez.
+    //Synchronized para que Java no permita a varios hilos. 
+    //No puedo permitir que dos hilos lo hagan a la vez.
     //No pueden ser static. 
-    public synchronized void add_producto(String productoID) {
+    public synchronized void add_producto(String productoID) { //INTRODUZCO EL PRODUCTO ID
         while (contador >= 10) { //Si esta completo el array
             try {
                 wait(); //... todos los hilos se esperan
