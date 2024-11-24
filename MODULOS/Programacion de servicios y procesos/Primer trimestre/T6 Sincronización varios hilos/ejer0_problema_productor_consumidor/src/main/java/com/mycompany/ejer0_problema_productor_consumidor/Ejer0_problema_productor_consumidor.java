@@ -8,6 +8,9 @@ package com.mycompany.ejer0_problema_productor_consumidor;
  *
  * @author Ana
  */
+
+
+
 public class Ejer0_problema_productor_consumidor {
 
     public static void main(String[] args) {
