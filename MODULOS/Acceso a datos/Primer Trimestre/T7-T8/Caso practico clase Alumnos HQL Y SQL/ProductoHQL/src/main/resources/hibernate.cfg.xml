@@ -1,0 +1,12 @@
+<hibernate-configuration>
+    <session-factory>
+        <!-- Propiedades de conexión a la BBDD-->
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/EjercicioAlumnos</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">Med@c</property>
+
+        <!-- Mapeo de entidades -->
+       <mapping resource="alumno.hbm.xml"/>
+   </session-factory>
+</hibernate-configuration> 
