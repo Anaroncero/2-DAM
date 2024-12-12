@@ -1,0 +1,17 @@
+<!-- Archivo de asignación: es un fichero XML donde se almacena la configuración de la asignación de los
+#datos de una clase JAVA (POJO) y los datos reales de la base de datos relacional.-->
+
+
+<hibernate-mapping>
+    <class name="com.example.demo.Pokemon" table="Pokemon">
+        <meta attribute="class-description">
+            Esta clase contiene información de los pokemon.
+        </meta>
+        <id name="idPokemon" type="int" column="idPokemon">
+            <generator class="native"/>
+        </id>
+        <property name="nombre" column="Nombre" type="string"/>
+        <property name="estatura" column="Estatura" type="int"/>
+        <property name="peso" column="Peso" type="int"/>
+    </class>
+</hibernate-mapping>
