@@ -1,0 +1,36 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="ejer1_reporte" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="43678cc1-6d82-4b9d-aa08-f88549d36718">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="nombreUsuario" class="java.lang.String"/>
+	<parameter name="direccionUsuario" class="java.lang.String"/>
+	<parameter name="telefonoUsuario" class="java.lang.Integer"/>
+	<query language="sql"><![CDATA[]]></query>
+	<background splitType="Stretch"/>
+	<title height="92" splitType="Stretch">
+		<element kind="staticText" uuid="ab9abad5-8796-4670-80c9-201de301bfa4" x="170" y="0" width="226" height="30" fontSize="18.0" hTextAlign="Center">
+			<text><![CDATA[REPORTE EJEMPLO]]></text>
+		</element>
+		<element kind="staticText" uuid="325cf09e-2913-4fba-9388-7e2989c03b7b" x="21" y="62" width="100" height="30" fontSize="18.0">
+			<text><![CDATA[Nombre:]]></text>
+		</element>
+		<element kind="textField" uuid="098d0023-c846-4726-bbf8-9f7bdd7b59e0" x="120" y="62" width="170" height="30" fontSize="16.0" hTextAlign="Left">
+			<expression><![CDATA[$P{nombreUsuario}]]></expression>
+		</element>
+	</title>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<element kind="staticText" uuid="7ed9e6c2-da99-41b6-a5b6-00c4c7818373" x="21" y="10" width="100" height="30" fontSize="18.0">
+				<text><![CDATA[Dirección:]]></text>
+			</element>
+			<element kind="staticText" uuid="e564c78a-024b-4350-8855-af2deb686db0" x="21" y="50" width="100" height="30" fontSize="18.0">
+				<text><![CDATA[Teléfono:]]></text>
+			</element>
+			<element kind="textField" uuid="47242c98-7c73-4632-981c-aaaa09bf7815" x="120" y="10" width="170" height="30" fontSize="16.0">
+				<expression><![CDATA[$P{direccionUsuario}]]></expression>
+			</element>
+			<element kind="textField" uuid="19ad6768-e7cb-41ef-ad45-d8f9acae02c4" x="120" y="50" width="170" height="30" fontSize="16.0">
+				<expression><![CDATA[$P{telefonoUsuario}]]></expression>
+			</element>
+		</band>
+	</detail>
+</jasperReport>

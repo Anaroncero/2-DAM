@@ -1,0 +1,147 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="Blank_A4" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8088a354-ec6c-43ed-9586-7dd9ddeb5314">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<dataset name="Empty Dataset1" uuid="86bfb179-c9f5-41ca-94ee-873423fe8ef2"/>
+	<dataset name="Dataset1" uuid="75ec62c5-2379-4612-8b00-f7184c98e89b">
+		<query language="sql"><![CDATA[]]></query>
+	</dataset>
+	<parameter name="nombre" class="java.lang.String"/>
+	<parameter name="n1" class="java.lang.Integer"/>
+	<parameter name="n2" class="java.lang.Integer"/>
+	<parameter name="n3" class="java.lang.Integer"/>
+	<parameter name="n4" class="java.lang.Integer"/>
+	<parameter name="n5" class="java.lang.Integer"/>
+	<parameter name="n6" class="java.lang.Integer"/>
+	<parameter name="n7" class="java.lang.Integer"/>
+	<query language="sql"><![CDATA[]]></query>
+	<background splitType="Stretch"/>
+	<pageHeader height="100" splitType="Stretch">
+		<element kind="staticText" uuid="fab094f7-2413-4d5a-abe2-4155e4fc820e" x="80" y="6" width="400" height="30" fontSize="19.0" hTextAlign="Center">
+			<text><![CDATA[INSTITUTO DE FORMACIÓN PROFESIONAL]]></text>
+		</element>
+		<element kind="staticText" uuid="3fa821e3-bfad-4148-ab9d-755b8beac06a" x="80" y="36" width="397" height="30" fontSize="19.0" bold="true" hTextAlign="Center">
+			<text><![CDATA[CERTIFICADO ACADÉMICO PERSONAL]]></text>
+		</element>
+		<element kind="staticText" uuid="e4638945-9831-4546-a720-ebfd17bee31b" x="80" y="70" width="400" height="30" fontSize="19.0" hTextAlign="Center">
+			<text><![CDATA[CFGS DAM - SEGUNDO CURSO]]></text>
+		</element>
+	</pageHeader>
+	<columnHeader height="150" splitType="Stretch">
+		<element kind="rectangle" uuid="37c3e377-b8b4-4278-b46c-1aa25539fa3b" x="170" y="30" width="390" height="20" forecolor="rgba(237, 232, 237, 0.0)" backcolor="#F5EAE9"/>
+		<element kind="staticText" uuid="e82e2984-d74e-43d9-9aaa-f7a012d7fe3a" x="0" y="30" width="170" height="20" fontSize="15.0" bold="true">
+			<text><![CDATA[Nombre del alumno/a:]]></text>
+		</element>
+		<element kind="staticText" uuid="0f9982e7-eb6c-4fbb-bb4a-0f9edd0702da" x="0" y="72" width="560" height="68" fontSize="13.0">
+			<text><![CDATA[El departamento de administracion de Medac Jaen acredita que el mencionado
+alumno/a esta matricula en segundo curso del ciclo superior de Desarrollo de
+Aplicaciones Multiplataforma, habiendo obtenido las siguientes calificaciones:]]></text>
+		</element>
+		<element kind="textField" uuid="ab622712-3873-40ee-a047-6593b4e94678" x="171" y="30" width="389" height="20" forecolor="#1C267A" fontSize="12.0" bold="true" vTextAlign="Middle">
+			<expression><![CDATA[$P{nombre}]]></expression>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="492" splitType="Stretch">
+			<element kind="rectangle" uuid="a62c4665-2f8c-4788-8b1b-d7973a77db05" x="171" y="51" width="335" height="1" forecolor="#000033" backcolor="#000033">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			</element>
+			<element kind="staticText" uuid="3e6da6f6-b700-424e-8cb3-7667d199edde" x="1" y="40" width="150" height="20" fontSize="13.0" bold="false">
+				<text><![CDATA[Desarrollo de interfaces:]]></text>
+			</element>
+			<element kind="rectangle" uuid="b99bf2e6-93e9-4f7d-bf82-e72c41c8dd7b" x="530" y="20" width="31" height="31" forecolor="#EDE8ED" backcolor="#EDE8ED"/>
+			<element kind="staticText" uuid="e81cbc71-a478-46a6-8b5b-643eaf4549ee" x="1" y="80" width="290" height="20" fontSize="13.0" bold="false">
+				<text><![CDATA[Programación Multimedia y Dispositivos móviles]]></text>
+				<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+			</element>
+			<element kind="rectangle" uuid="1eb763ba-2883-430f-9f67-3e008f8a7ccd" x="306" y="150" width="200" height="1" forecolor="#000033" backcolor="#000033">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+			</element>
+			<element kind="rectangle" uuid="d4d1dfc9-1756-40b2-a10f-7ab3a224fa4a" x="531" y="70" width="31" height="31" forecolor="#EDE8ED" backcolor="#EDE8ED">
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+			</element>
+			<element kind="staticText" uuid="36a57e8e-a152-40c8-86c3-313ee894c799" x="1" y="130" width="290" height="20" fontSize="13.0" bold="false">
+				<text><![CDATA[Programación de Servicios y Procesos]]></text>
+				<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+			</element>
+			<element kind="rectangle" uuid="26e32afd-5391-4c3b-a7f7-9e7dcd6bac9e" x="306" y="100" width="200" height="1" forecolor="#000033" backcolor="#000033">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			</element>
+			<element kind="rectangle" uuid="295d0d9e-a66f-41d8-8b0c-03f26d6f31b6" x="530" y="120" width="31" height="31" forecolor="#EDE8ED" backcolor="#EDE8ED">
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+			</element>
+			<element kind="staticText" uuid="cbfa626b-76c7-41d0-83c7-282594414156" x="1" y="180" width="100" height="20" fontSize="13.0" bold="false">
+				<text><![CDATA[Acceso a Datos:]]></text>
+				<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+			</element>
+			<element kind="rectangle" uuid="8ab1bf0e-ff8e-4322-ba8c-07cd91274df5" x="111" y="199" width="395" height="1" forecolor="#000033" backcolor="#000033">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			</element>
+			<element kind="rectangle" uuid="1c123de6-dac8-4ed4-8667-65218aad8272" x="530" y="170" width="31" height="31" forecolor="#EDE8ED" backcolor="#EDE8ED">
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+			</element>
+			<element kind="rectangle" uuid="bc10ae06-472b-49ec-9558-67599d13cca2" x="531" y="220" width="31" height="31" forecolor="#EDE8ED" backcolor="#EDE8ED">
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+			</element>
+			<element kind="rectangle" uuid="0f730c5a-09e2-4d0c-bc4d-a67831ebe9a2" x="223" y="251" width="283" height="1" forecolor="#000033" backcolor="#000033">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			</element>
+			<element kind="rectangle" uuid="eef6ed9b-1515-4aec-9bf0-dceb2f91ab4c" x="231" y="300" width="275" height="1" forecolor="#000033" backcolor="#000033">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+			</element>
+			<element kind="staticText" uuid="3a9fdf8a-aa3f-458b-a780-20ccb3fb7383" x="1" y="230" width="200" height="20" fontSize="13.0" bold="false">
+				<text><![CDATA[Sistemas de Gestión Empresarial:]]></text>
+				<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+			</element>
+			<element kind="rectangle" uuid="c07151c1-2764-456a-b2a2-ba8203bcbbe0" x="530" y="320" width="31" height="31" forecolor="#EDE8ED" backcolor="#EDE8ED">
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+			</element>
+			<element kind="staticText" uuid="0b9967fc-46bc-405e-b251-85e52fa57ff4" x="1" y="330" width="50" height="20" fontSize="13.0" bold="false">
+				<text><![CDATA[Inglés:]]></text>
+				<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+			</element>
+			<element kind="rectangle" uuid="bf88b427-1459-491d-b84a-948195ab545a" x="530" y="270" width="31" height="31" forecolor="#EDE8ED" backcolor="#EDE8ED">
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<property name="com.jaspersoft.studio.unit.x" value="px"/>
+			</element>
+			<element kind="staticText" uuid="92514efd-2b13-404b-ba3b-c17e7548880d" x="1" y="280" width="222" height="20" fontSize="13.0" bold="false">
+				<text><![CDATA[Empresas e iniciativa Emprendedora:]]></text>
+				<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+			</element>
+			<element kind="rectangle" uuid="4bc4b448-8fcd-4f97-8f47-e0d30ab441b7" x="61" y="350" width="445" height="1" forecolor="#000033" backcolor="#000033">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			</element>
+			<element kind="textField" uuid="850a5c6d-4412-4ea8-8c9f-ba3bb379f4df" x="530" y="20" width="32" height="30" forecolor="#1C267A" fontSize="14.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$P{n1}]]></expression>
+			</element>
+			<element kind="textField" uuid="1f144c6b-c7dd-4f75-8e29-2c2e8f2cc858" x="530" y="70" width="32" height="30" forecolor="#1C267A" fontSize="14.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$P{n2}]]></expression>
+			</element>
+			<element kind="textField" uuid="67885ca3-acde-4605-8951-aed19d554595" x="530" y="120" width="32" height="30" forecolor="#1C267A" fontSize="14.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$P{n3}]]></expression>
+			</element>
+			<element kind="textField" uuid="8ac07a62-19f9-4207-9cce-aa1942150f6d" x="530" y="170" width="32" height="30" forecolor="#1C267A" fontSize="14.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$P{n4}]]></expression>
+			</element>
+			<element kind="textField" uuid="f19e494e-d1c6-446b-bda7-e64c43fa1f98" x="530" y="220" width="32" height="30" forecolor="#1C267A" fontSize="14.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$P{n5}]]></expression>
+			</element>
+			<element kind="textField" uuid="ea4c9fc7-55de-47e9-bea7-df1962b9e4af" x="530" y="270" width="32" height="30" forecolor="#1C267A" fontSize="14.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$P{n6}]]></expression>
+			</element>
+			<element kind="textField" uuid="8bc6402b-0fcb-48da-bc8f-76e7144efe02" x="530" y="320" width="32" height="30" forecolor="#1C267A" fontSize="14.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$P{n7}]]></expression>
+			</element>
+		</band>
+	</detail>
+</jasperReport>
