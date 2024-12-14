@@ -51,7 +51,10 @@ public class Ciudad {
         this.clientes = clientes;
     }
 
-    
+    public String toString() {
+        return "Ciudad: " + nombre + ", Clientes: " + clientes.size();
+    }
+
 
     
 }
