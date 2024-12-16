@@ -10,7 +10,7 @@
 *.iso
 *.exe
 *.code-workspace
-**/programa exe Ejer_1/
+****/programa exe Ejer_1/
 
 /MODULOS/Programacion multimedia y dispositivos moviles/Segundo trimestre/T11-T12 Unity/
 /MODULOS/Desarrollo de interfaces/Segundo Trimestre/T11/Ejer_1/target/
