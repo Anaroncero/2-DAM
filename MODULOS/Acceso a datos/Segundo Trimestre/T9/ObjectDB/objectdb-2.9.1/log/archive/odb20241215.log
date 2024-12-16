@@ -1,0 +1,126 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2024-12-15 10:38:10 #1 store] 
+Database 'D:\GitHub\2-DAM\MODULOS\Acceso a datos\Segundo Trimestre\T9\ObjectDB\objectdb-2.9.1\db\tarea9.odb' has been recovered (tr. 13-15)
+
+[2024-12-15 10:38:10 #2 store] 
+Database 'D:\GitHub\2-DAM\MODULOS\Acceso a datos\Segundo Trimestre\T9\ObjectDB\objectdb-2.9.1\db\tarea9.odb' is opened by 6624@Ana
+
+[2024-12-15 10:38:10 #3 store] 
+Configuration path: D:\GitHub\2-DAM\MODULOS\Acceso a datos\Segundo Trimestre\T9\ObjectDB\objectdb-2.9.1\objectdb.conf
+
+[2024-12-15 10:38:35 #4 store] 
+Database 'D:\GitHub\2-DAM\MODULOS\Acceso a datos\Segundo Trimestre\T9\ObjectDB\objectdb-2.9.1\db\tarea9.odb' is closed by 6624@Ana
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2024-12-15 11:00:21 #1 server] 
+Server on port 6136 has started by 11680@Ana
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2024-12-15 15:43:01 #1 explorer] 
+[ObjectDB 2.9.1] javax.persistence.PersistenceException
+Attempt to open a database file 'D:\GitHub\2-DAM\MODULOS\Acceso a datos\Segundo Trimestre\T9\ObjectDB\objectdb-2.9.1\db\tarea91.odb' that is currently in use by another process (error 141)
+	at com.objectdb.Explorer$1.run(Explorer.java:57)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+Caused by: com.objectdb.o.UserException: Attempt to open a database file 'D:\GitHub\2-DAM\MODULOS\Acceso a datos\Segundo Trimestre\T9\ObjectDB\objectdb-2.9.1\db\tarea91.odb' that is currently in use by another process
+	at com.objectdb.o.MSG.a(MSG.java:64)
+	at com.objectdb.o.LFL.J(LFL.java:947)
+	at com.objectdb.o.LFL.x(LFL.java:904)
+	at com.objectdb.o.LFL.x(LFL.java:814)
+	at com.objectdb.o.DFL.<init>(DFL.java:241)
+	at com.objectdb.o.DMG.<init>(DMG.java:27)
+	at com.objectdb.o.MST.<init>(MST.java:127)
+	at com.objectdb.o.MST.ap(MST.java:109)
+	at com.objectdb.o.MSF.Z0(MSF.java:190)
+	at com.objectdb.o.OMF.s(OMF.java:816)
+	at com.objectdb.jpa.EMF.s(EMF.java:130)
+	at com.objectdb.o.OMF.x(OMF.java:722)
+	at com.objectdb.jpa.EMF.createEntityManager(EMF.java:149)
+	... 16 more
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2024-12-15 15:43:17 #1 store] 
+Database 'D:\GitHub\2-DAM\MODULOS\Acceso a datos\Segundo Trimestre\T9\ObjectDB\objectdb-2.9.1\db\tarea91.odb' has been recovered (tr. 1-2)
+
+[2024-12-15 15:43:17 #2 store] 
+Database 'D:\GitHub\2-DAM\MODULOS\Acceso a datos\Segundo Trimestre\T9\ObjectDB\objectdb-2.9.1\db\tarea91.odb' is opened by 17744@Ana
+
+[2024-12-15 15:43:17 #3 store] 
+Configuration path: D:\GitHub\2-DAM\MODULOS\Acceso a datos\Segundo Trimestre\T9\ObjectDB\objectdb-2.9.1\objectdb.conf
+
+[2024-12-15 15:43:40 #4 store] 
+Database 'D:\GitHub\2-DAM\MODULOS\Acceso a datos\Segundo Trimestre\T9\ObjectDB\objectdb-2.9.1\db\tarea91.odb' is closed by 17744@Ana
+
+[2024-12-15 15:43:40 #5 store] 
+Database 'D:\GitHub\2-DAM\MODULOS\Acceso a datos\Segundo Trimestre\T9\ObjectDB\objectdb-2.9.1\db\tarea91.odb' is opened by 17744@Ana
+
+[2024-12-15 15:43:40 #6 store] 
+Configuration path: D:\GitHub\2-DAM\MODULOS\Acceso a datos\Segundo Trimestre\T9\ObjectDB\objectdb-2.9.1\objectdb.conf
+
+[2024-12-15 15:43:45 #7 store] 
+Database 'D:\GitHub\2-DAM\MODULOS\Acceso a datos\Segundo Trimestre\T9\ObjectDB\objectdb-2.9.1\db\tarea91.odb' is closed by 17744@Ana
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2024-12-15 15:52:57 #1 explorer] 
+[ObjectDB 2.9.1] javax.persistence.PersistenceException
+Attempt to open a database file 'D:\GitHub\2-DAM\MODULOS\Acceso a datos\Segundo Trimestre\T9\ObjectDB\objectdb-2.9.1\db\tarea91.odb' that is currently in use by another process (error 141)
+	at com.objectdb.Explorer$1.run(Explorer.java:57)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+Caused by: com.objectdb.o.UserException: Attempt to open a database file 'D:\GitHub\2-DAM\MODULOS\Acceso a datos\Segundo Trimestre\T9\ObjectDB\objectdb-2.9.1\db\tarea91.odb' that is currently in use by another process
+	at com.objectdb.o.MSG.a(MSG.java:64)
+	at com.objectdb.o.LFL.J(LFL.java:947)
+	at com.objectdb.o.LFL.x(LFL.java:904)
+	at com.objectdb.o.LFL.x(LFL.java:814)
+	at com.objectdb.o.DFL.<init>(DFL.java:241)
+	at com.objectdb.o.DMG.<init>(DMG.java:27)
+	at com.objectdb.o.MST.<init>(MST.java:127)
+	at com.objectdb.o.MST.ap(MST.java:109)
+	at com.objectdb.o.MSF.Z0(MSF.java:190)
+	at com.objectdb.o.OMF.s(OMF.java:816)
+	at com.objectdb.jpa.EMF.s(EMF.java:130)
+	at com.objectdb.o.OMF.x(OMF.java:722)
+	at com.objectdb.jpa.EMF.createEntityManager(EMF.java:149)
+	... 16 more
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2024-12-15 15:53:41 #1 store] 
+Database 'D:\GitHub\2-DAM\MODULOS\Acceso a datos\Segundo Trimestre\T9\ObjectDB\objectdb-2.9.1\db\tarea91.odb' has been recovered (tr. 13-15)
+
+[2024-12-15 15:53:41 #2 store] 
+Database 'D:\GitHub\2-DAM\MODULOS\Acceso a datos\Segundo Trimestre\T9\ObjectDB\objectdb-2.9.1\db\tarea91.odb' is opened by 8904@Ana
+
+[2024-12-15 15:53:41 #3 store] 
+Configuration path: D:\GitHub\2-DAM\MODULOS\Acceso a datos\Segundo Trimestre\T9\ObjectDB\objectdb-2.9.1\objectdb.conf
+
+[2024-12-15 15:57:28 #4 store] 
+Database 'D:\GitHub\2-DAM\MODULOS\Acceso a datos\Segundo Trimestre\T9\ObjectDB\objectdb-2.9.1\db\tarea91.odb' is closed by 8904@Ana
+
